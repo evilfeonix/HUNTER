@@ -41,6 +41,7 @@ With Hunter, you can easily know much about your victims, and plan a successful 
 ```bash
 git clone https://github.com/evilfeonix/HUNTER.git
 cd HUNTER
+sed -i 's/\r$//' hunter.sh
 chmod u+x hunter.sh
 ./hunter.sh
 ```
@@ -55,8 +56,9 @@ chmod u+x hunter.sh
 
 # **Tunnel server served by Hunter**:
 1. Localhost: malicious link can only be active in local machine (_use it to exprienced how this tool works_).
-2. Pinggy.io: use this to make the malicious link accessible around the world.
-3. Serveo.net: use this to make the malicious link accessible around the world.
+2. Serveo.net: use this to make the malicious link accessible around the world.
+3. LocalTunnel: use this to make the malicious link accessible around the world (_npm is required_). 
+4. Localhost.run: use this to make the malicious link accessible around the world.
 
 # **Information hunted by this tool in summary**:
 - Browser information: name, version, language, appName, appCodeName, cookieEnable
@@ -71,6 +73,8 @@ chmod u+x hunter.sh
 - By donating, funding our bank account 
 - By giving our program a star 
 - By forking this our program 
+
+ Please shire this tool in order platforms.
 
 ### **Our Goal**:
 our current stars and forkers... our goal is to reach...
