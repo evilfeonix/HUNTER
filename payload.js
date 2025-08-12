@@ -274,7 +274,7 @@ tzArr = TZ.split("/");
 
 City = tzArr[tzArr.length - 1];
 Ctry = tz2Country[City];
-Country = Country.replaceAll(" ","_")
+Country = Ctry.replaceAll(" ","_")
 
 var TimeZone = new Date();
 TimeZone=TimeZone.toString();
@@ -528,3 +528,4 @@ console.log(`hardware Concurrency: ${hardware}`);
             }
     }
     // console.log(`appVersion: ${navigator.userAgentData.getHighEntropyValues(['architecture','model','platform','platformVersion','fullVersionList'])}`); 
+
