@@ -1,6 +1,7 @@
 <div align=center>
 
 # **HUNTER**
+### v1.1.1 is out
 
 </div>
 
@@ -11,9 +12,6 @@ Hunter!, a social engineering tool that similate phishing attack, it focus on ga
 With Hunter, you can easily know much about your victims, and plan a successful feature attack, examples.
 - See if their browser is vulnerable to other cyber attacks
 - Used our `word-gen` to generate a list of password based on victims information
-- Used our `email-cracker` to try cracking their email password 
-- Used our `geo-phone` to know much about their phone number and their approximately location
-- Used our `ip-info-fetcher` to know about their ip address and their approximately location
 
 # **Features**:
 1. Hunter detect the date and time victims visit our malicious link
@@ -40,9 +38,17 @@ With Hunter, you can easily know much about your victims, and plan a successful 
 # **Installation and usage**:
 ```bash
 git clone https://github.com/evilfeonix/HUNTER.git
+```
+```
 cd HUNTER
+```
+```
 sed -i 's/\r$//' hunter.sh
+```
+```
 chmod u+x hunter.sh
+```
+```
 ./hunter.sh
 ```
 
@@ -76,15 +82,6 @@ chmod u+x hunter.sh
 
  Please shire this tool in order platforms.
 
-### **Our Goal**:
-our current stars and forkers... our goal is to reach...
-- 1,000 followers
-- 700 stars
-- 400 forkers
-- 200 watchers
-- 100 issues
-Please support and encourage us by starring and forking this our tool, and others of our tools.
-
 ### **Tutorial**:
 we also provide a youtube video tutorial that cover buth installation and usage of this tool.\
 click the link below to watch the complete tutorial `link here`, and also dont forget to subscribing to our youtube channels.
@@ -95,3 +92,4 @@ Thanks for your supports, _Happy Hacking!_\
 _Happy Hunting Victims Informations_\
 🚀🚀🚀!.
 </div>
+
