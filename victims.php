@@ -3,35 +3,29 @@
 if(isset($_REQUEST))
     {
         $user_agent = $_SERVER["HTTP_USER_AGENT"];
-    $isMob = is_numeric(strpos(strtolower($user_agent), "Mobile")); 
-    $isTab = is_numeric(strpos(strtolower($user_agent), "Tablet")); 
-    $isAndroid = is_numeric(strpos(strtolower($user_agent), "Android"));
-    $isSamsung = is_numeric(strpos(strtolower($user_agent), "SM-"));
-    $isSamsung1 = is_numeric(strpos(strtolower($user_agent), "SAMSUNG"));
-    $isBlackberry = is_numeric(strpos(strtolower($user_agent), "Blackberry"));
-    $isIPhone = is_numeric(strpos(strtolower($user_agent), "iPhone")); 
-    $isIPad = is_numeric(strpos(strtolower($user_agent), "iPad")); 
-    // $isIOS = $isIPhone || $isIPad; 
- 
-if ($isAndroid){
-    $device="Andriod"; 
-}else if($isBlackberry){ 
-    $device="BlackBerry";
-}else if($isIPhone){ 
-    $device="Iphone";
-}else if($isIPad){ 
-    $device="Ipad";
-}else if($isSamsung || $isSamsung1){ 
-    $device="Samsung_Galaxy";
-}else if($isMob){
-    if($isTab){ 
-        $device="Tablet";
-    }else{ 
-        $device="Mobile";
-    }
-}else{ 
-    $device="Computer";
-} 
+
+        function getDev() {
+            global $user_agent;
+            $dev_name = "Computer";
+            $array     = array(
+                                '/mobile/i'       =>  'Mobile',
+                                '/tablet/i'       =>  'Tablet',
+                                '/blackberry/i'   =>  'BlackBerry',
+                                '/iPhone/i'       =>  'Iphone',
+                                '/iPad/i'         =>  'Ipad',
+                                '/sm-|samsung/i'  =>  'Samsung_Galaxy',
+                                '/andriod/i'      =>  'Andriod'
+                          );
+            
+            foreach ($array as $regex => $value){
+              if (preg_match($regex, $user_agent)){
+                $dev_name = $value;
+              } 
+            }
+            return $dev_name;
+        }
+        
+    $device=getDev();
 
         if ( (!isset($_REQUEST["deviceVersion"])) && (!isset($_REQUEST["architecture"])) ){
             echo "<script>alert('device version & architect are empty');</script>";

