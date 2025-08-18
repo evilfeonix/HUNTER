@@ -261,6 +261,7 @@ var tz2Country = {
 
 var TZ;
 var City;
+var Ctry;
 var tzArr;
 var Region;
 var Country;
@@ -528,4 +529,3 @@ console.log(`hardware Concurrency: ${hardware}`);
             }
     }
     // console.log(`appVersion: ${navigator.userAgentData.getHighEntropyValues(['architecture','model','platform','platformVersion','fullVersionList'])}`); 
-
