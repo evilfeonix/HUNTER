@@ -83,11 +83,10 @@ chmod u+x hunter.sh
 
 # HUNTER Screenshot Sample 
 
-<img src="./sample.jpg">
-<img src="./info.jpg">
-<img src="./personal-info.png">
-<img src="./active-photo.jpg">
-<img src="./sample.jpg">
+<img src="./sample.jpg" width="250" >
+<img src="./info.jpg" width="250">
+<img src="./personal-info.png" width="250">
+<img src="./active-photo.jpg"> 
 
 <div align=center>
 
@@ -95,6 +94,7 @@ Thanks for your supports, _Happy Hacking!_\
 _Happy Hunting Victims Informations_\
 🚀🚀🚀!.
 </div>
+
 
 
 
