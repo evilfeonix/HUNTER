@@ -88,14 +88,19 @@ chmod u+x hunter.sh
 </div>
 
 # Support and Encourage us
+
 - Follow our github page <a href="https://github.com/evilfeonix">https://github.com/evilfeonix</a>
+
 - Star and Fork HUNTER
 
 <div align=center>
+    
 Thanks for your supports, _Happy Hacking!_\
 _Happy Hunting Victims Informations_\
 🚀🚀🚀!.
+
 </div>
+
 
 
 
