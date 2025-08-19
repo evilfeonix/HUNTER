@@ -1,22 +1,18 @@
 <div align=center>
 
 <a href="https://github.com/evilfeonix/HUNTER"><img src="hunter.png" alt="02" border="0" /></a> 
-# **HUNTER**
 
+![Geo-Phone](https://img.shields.io/badge/version-v[1.0.6]-blue.svg) 
 
-
-</div>
-<p align="center">
 <a href="https://github.com/evilfeonix/followers"><img title="evilfeonix-Followers" src="https://img.shields.io/github/followers/evilfeonix?color=blue&style=flat-square"></a>
     
 <a href="https://github.com/evilfeonix/HUNTER/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/evilfeonix/HUNTER?color=blue&style=flat-square"></a>
-
 <a href="https://github.com/evilfeonix/HUNTER/network/members"><img title="Forks" src="https://img.shields.io/github/forks/evilfeonix/HUNTER?color=yellow&style=flat-square"></a>
 
 <a href="https://github.com/evilfeonix/HUNTER/"><img title="Size" src="https://img.shields.io/github/repo-size/evilfeonix/HUNTER?style=flat-square&color=pink"></a>
-
 <a href="https://github.com/evilfeonix/HUNTER/commit-activity"><img height="20" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>&nbsp;&nbsp;
-</p>
+</div>
+
 _Know who your victims are, where they lives, device they used and language they understand, by using our increadible hacking tool named `HUNTER`!_
 
 Hunter!, a social engineering tool that similate phishing attack, it focus on gathering information by hacking and maniplating victims to makes them reveals much more of their information to attacker, 
@@ -104,5 +100,6 @@ Thanks for your supports, _Happy Hacking!_\
 _Happy Hunting Victims Informations_\
 🚀🚀🚀!.
 </div>
+
 
 
