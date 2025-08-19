@@ -83,17 +83,20 @@ chmod u+x hunter.sh
 
 # HUNTER Screenshot Sample 
 
-<img src="./sample.jpg" width="250" >
-<img src="./info.jpg" width="250">
-<img src="./personal-info.png" width="250">
-<img src="./active-photo.jpg"> 
+<div align=center>
+<img src="./sample.jpg" width="350" > <img src="./info.jpg" width="350"> <img src="./personal-info.png" width="350"> <img src="./active-photo.jpg"> 
+</div>
+
+# Support and Encourage us
+- Follow our github page <a href="https://github.com/evilfeonix">https://github.com/evilfeonix</a>
+- Star and Fork HUNTER
 
 <div align=center>
-
 Thanks for your supports, _Happy Hacking!_\
 _Happy Hunting Victims Informations_\
 🚀🚀🚀!.
 </div>
+
 
 
 
