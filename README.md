@@ -4,7 +4,6 @@
 
 ![Geo-Phone](https://img.shields.io/badge/version-v[1.0.6]-blue.svg) 
 
-<a href="https://github.com/evilfeonix/followers"><img title="evilfeonix-Followers" src="https://img.shields.io/github/followers/evilfeonix?color=blue&style=flat-square"></a>
     
 <a href="https://github.com/evilfeonix/HUNTER/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/evilfeonix/HUNTER?color=blue&style=flat-square"></a>
 <a href="https://github.com/evilfeonix/HUNTER/network/members"><img title="Forks" src="https://img.shields.io/github/forks/evilfeonix/HUNTER?color=yellow&style=flat-square"></a>
@@ -32,7 +31,6 @@ With Hunter, you can easily know much about your victims, and plan a successful 
 6. Hunter track down victims movement in our malicious website 
 6. Hunter report any error concerning accessing camera and GPS location 
 
->**Tips: If Hunter report accessing GPS location error, then use `geo-phone` or `ip-info-fetcher` to mapped victims approximately location based on their phone number or ip address, recommended to used `geo-phone`**.
 
 # **OS used**:
 - Termux
@@ -41,7 +39,7 @@ With Hunter, you can easily know much about your victims, and plan a successful 
 # **Requeirments**:
 1. php.
 2. ssh.
-3. bash.
+3. npm.
 
 # **Installation and usage**:
 ```bash
@@ -69,10 +67,12 @@ chmod u+x hunter.sh
 >**Important: If you select `Festival Wishing` template, we will ask you to enter "festival name", if the festival name include space (eg."New Year"), then replace it with underscore (eg."New_Year"), if not, the script will produce an error**.
 
 # **Tunnel server served by Hunter**:
-1. Localhost: malicious link can only be active in local machine (_use it to exprienced how this tool works_).
-2. Serveo.net: use this to make the malicious link accessible around the world.
-3. LocalTunnel: use this to make the malicious link accessible around the world (_npm is required_). 
-4. Localhost.run: use this to make the malicious link accessible around the world.
+1. Localhost.
+2. Serveo.net. 
+3. LocalTunnel. 
+4. Localhost.run.
+
+>**Important: All the tunnel server can be accessible around the world but Localhost can only be active in local machine (_use it to exprienced how this tool works_).**.
 
 # **Information hunted by this tool in summary**:
 - Browser information: name, version, language, appName, appCodeName, cookieEnable
@@ -81,18 +81,13 @@ chmod u+x hunter.sh
 - Location Information: city, region, country, timezone, latitude, longitude, exact address and map location 
 - And other information that can not be listed here.
 
-### **Support and encourage us**:
-- By following us on github and other of our platforms 
-- By subscribing to our youtube channels
-- By donating, funding our bank account 
-- By giving our program a star 
-- By forking this our program 
+# HUNTER Screenshot Sample 
 
- Please shire this tool in order platforms.
-
-### **Tutorial**:
-we also provide a youtube video tutorial that cover buth installation and usage of this tool.\
-click the link below to watch the complete tutorial `link here`, and also dont forget to subscribing to our youtube channels.
+<img src="./sample.jpg">
+<img src="./info.jpg">
+<img src="./personal-info.png">
+<img src="./active-photo.jpg">
+<img src="./sample.jpg">
 
 <div align=center>
 
@@ -100,6 +95,7 @@ Thanks for your supports, _Happy Hacking!_\
 _Happy Hunting Victims Informations_\
 🚀🚀🚀!.
 </div>
+
 
 
 
